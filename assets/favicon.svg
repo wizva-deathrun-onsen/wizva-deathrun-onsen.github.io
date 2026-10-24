@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- 泉水圖示：仿遊戲地圖上的泉水標記（藍色水柱＋石造水盆） -->
+  <defs>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bff4ff"/>
+      <stop offset="1" stop-color="#2fb3e0"/>
+    </linearGradient>
+    <linearGradient id="stone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e6e9ec"/>
+      <stop offset="1" stop-color="#9aa3ab"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#1f3a4a"/>
+  <!-- 上層噴出的水 -->
+  <path d="M14 14 Q32 6 50 14 Q44 24 36 28 L36 40 L28 40 L28 28 Q20 24 14 14 Z" fill="url(#water)"/>
+  <ellipse cx="32" cy="14" rx="18" ry="5" fill="#e8fbff" opacity="0.9"/>
+  <!-- 水盆 -->
+  <ellipse cx="32" cy="46" rx="22" ry="7" fill="url(#stone)"/>
+  <ellipse cx="32" cy="44" rx="17" ry="4.5" fill="#46c4ea"/>
+  <path d="M10 46 Q10 54 32 55 Q54 54 54 46" fill="none" stroke="#7d868e" stroke-width="2"/>
+</svg>
