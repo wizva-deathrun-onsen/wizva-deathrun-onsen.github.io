@@ -47,6 +47,7 @@ npm test        # node:test 單元測試（Node 22+）
 
 | 欄位 | 值 |
 | --- | --- |
+| `name.zh` / `name.ja` | 以 leveling-guide 的繁中／日文譯名為準 |
 | `id` | 與 leveling-guide 的角色 key 相同（特殊造型去掉 `-數字` 後綴），頭像檔名也用它 |
 | `no` | 遊戲內角色編號；特殊造型與原版共用同一個編號 |
 | `alignment` | `good` / `neutral` / `evil` / `null` |
