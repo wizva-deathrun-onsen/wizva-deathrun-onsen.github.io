@@ -9,7 +9,7 @@
     "filterAlignment": "性格",
     "filterElement": "屬性",
     "filterBond": "緣份",
-    "filterKnown": "只顯示已有對話資料的角色",
+    "filterKnown": "僅顯示已有資料的角色",
     "sort": "排序",
     "sortDefault": "預設（依性格）",
     "sortNo": "編號",
