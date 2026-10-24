@@ -2,7 +2,7 @@
 
 《辟邪除妖 Variants Daphne》（ウィザードリィ ヴァリアンツ ダフネ）送死流泡泉水的固定對話正確選項，以及遣散有緣人後的緣份整理。
 
-網站：https://yf24.github.io/wizva-deathrun-onsen/
+網站：https://wizva-deathrun-onsen.github.io/
 
 ## 什麼是送死流
 
@@ -18,7 +18,7 @@
 
 ## 回報資料
 
-點網站上的「回報新角色／修正資料」，或直接開 [Issue 範本](https://github.com/yf24/wizva-deathrun-onsen/issues/new?template=dialogue-report.yml)。
+點網站上的「回報新角色／修正資料」，或直接開 [Issue 範本](https://github.com/wizva-deathrun-onsen/wizva-deathrun-onsen.github.io/issues/new?template=dialogue-report.yml)。
 維護者審核後會手動更新 `data/characters.json`，並把回報者填進 `contributor`。
 
 ## 開發
