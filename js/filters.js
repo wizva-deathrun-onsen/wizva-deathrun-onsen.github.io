@@ -13,7 +13,7 @@ export const ELEMENTS = ['light', 'dark', 'water', 'fire', 'wind', 'earth', 'non
 export const BONDS = ['str', 'int', 'agi', 'fai', 'luk', 'spi'];
 
 /** 可用的排序鍵。 */
-export const SORT_KEYS = ['default', 'name', 'option', 'bond'];
+export const SORT_KEYS = ['default', 'name', 'bond'];
 
 /** 支援的語言。 */
 export const LANGS = ['zh', 'ja'];
@@ -182,7 +182,6 @@ function byOrder(order) {
  * 排序角色清單，回傳新陣列。同值時保持原本資料順序（Array.prototype.sort 為 stable）。
  * - default：依性格（善→中立→惡→未標註）
  * - name：依目前語言的名稱，locale-aware
- * - option：依正確選項 1→3，未知排最後
  * - bond：依緣份 力→靈，未知排最後
  * @param {Object[]} characters
  * @param {string} key 見 SORT_KEYS
@@ -196,10 +195,6 @@ export function sortCharacters(characters, key, lang) {
       const collator = new Intl.Collator(lang === 'ja' ? 'ja' : 'zh-Hant-TW');
       const name = (c) => localized(c.name, lang).text ?? '';
       return list.sort((a, b) => collator.compare(name(a), name(b)));
-    }
-    case 'option': {
-      const opt = (c) => c.dialogue?.option ?? Infinity;
-      return list.sort((a, b) => opt(a) - opt(b));
     }
     case 'bond':
       return list.sort((a, b) => byOrder(BONDS)(a.bond, b.bond));

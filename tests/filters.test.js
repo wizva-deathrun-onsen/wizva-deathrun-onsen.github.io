@@ -74,7 +74,7 @@ describe('parseQuery / serializeQuery', () => {
   });
 
   test('不合法的 sort / lang 退回預設', () => {
-    const s = parseQuery('?sort=evil&lang=en');
+    const s = parseQuery('?sort=option&lang=en');
     assert.equal(s.sort, 'default');
     assert.equal(s.lang, null);
   });
@@ -170,10 +170,6 @@ describe('sortCharacters', () => {
       ['daniel', 'philip', 'adam', 'savia', 'alex']);
   });
 
-  test('option 依選項排序，未知排最後', () => {
-    const list = [make('a'), daniel, adam];
-    assert.deepEqual(sortCharacters(list, 'option', 'zh').map((c) => c.id), ['adam', 'daniel', 'a']);
-  });
 
   test('bond 依力→靈排序，未知排最後', () => {
     assert.deepEqual(sortCharacters([savia, philip, adam, daniel], 'bond', 'zh').map((c) => c.id),
