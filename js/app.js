@@ -182,7 +182,11 @@ function renderRow(c) {
   const titleName = c.name.zh ?? c.name.ja ?? c.id;
   const report = el('a', {
     className: 'report',
-    href: buildIssueUrl(REPO_URL, ISSUE_TEMPLATE, `${strings.ui.reportTitlePrefix} ${titleName}`),
+    // 預填中日文名稱（對應 Issue Form 的 name_zh／name_ja 欄位），回報者不用再打一次。
+    href: buildIssueUrl(REPO_URL, ISSUE_TEMPLATE, `${strings.ui.reportTitlePrefix} ${titleName}`, {
+      name_zh: c.name.zh,
+      name_ja: c.name.ja,
+    }),
     target: '_blank',
     rel: 'noopener',
     textContent: strings.ui.report,

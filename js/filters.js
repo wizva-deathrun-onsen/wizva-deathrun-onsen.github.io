@@ -224,15 +224,19 @@ export function sortCharacters(characters, key, lang) {
 }
 
 /**
- * 組出 GitHub new issue 網址，帶入 Issue Form 範本與預填標題。
+ * 組出 GitHub new issue 網址，帶入 Issue Form 範本、預填標題與欄位。
  * @param {string} repoUrl 例如 `https://github.com/owner/repo`
  * @param {string} template Issue Form 檔名
  * @param {string} [title] 預填的 issue 標題；省略則不帶
+ * @param {Object<string, string|null>} [fields] 以 Issue Form 欄位 id 為鍵的預填值；空值會略過
  * @returns {string}
  */
-export function buildIssueUrl(repoUrl, template, title) {
+export function buildIssueUrl(repoUrl, template, title, fields = {}) {
   const params = new URLSearchParams({ template });
   if (title) params.set('title', title);
+  for (const [id, value] of Object.entries(fields)) {
+    if (value) params.set(id, value);
+  }
   return `${repoUrl.replace(/\/+$/, '')}/issues/new?${params}`;
 }
 

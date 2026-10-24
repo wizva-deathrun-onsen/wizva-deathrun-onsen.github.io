@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         感謝回報！請只回報 **送死流**（隊伍有成員陣亡後泡泉水）觸發的固定對話，一般泉水的隨機對話不適用。
-        **角色名稱、性格、正確選項為必填**；其他不確定的欄位可以留空或選「不確定」。
+        **必填：角色名稱、性格，以及「正確選項」或「選項文字」至少一項**（兩項都填最好）；其他不確定的欄位可以留空。
         送出後系統會自動檢查，缺少必填欄位會留言提醒。維護者審核後會更新到網站並把你列為補充者。
 
   - type: input
@@ -15,7 +15,7 @@ body:
     attributes:
       label: 角色名稱（中文）
       description: 以遊戲繁中版譯名為準；不知道中文名可以填日文
-      placeholder: 丹尼爾
+      placeholder: 例如：丹尼爾
     validations:
       required: true
 
@@ -23,7 +23,7 @@ body:
     id: name_ja
     attributes:
       label: 角色名稱（日文）
-      placeholder: ダニエル
+      placeholder: 例如：ダニエル
     validations:
       required: false
 
@@ -62,7 +62,7 @@ body:
     id: option
     attributes:
       label: 正確選項
-      description: 必選，由上往下數的第幾個選項
+      description: 由上往下數的第幾個選項；與「選項文字」至少填一項
       options:
         - "1"
         - "2"
@@ -75,8 +75,8 @@ body:
     id: answer
     attributes:
       label: 選項文字
-      description: 正確選項的文字；中文或日文皆可
-      placeholder: 得到上帝寬恕
+      description: 正確選項的文字，中文或日文皆可；與「正確選項」至少填一項
+      placeholder: 例如：得到上帝寬恕
     validations:
       required: false
 

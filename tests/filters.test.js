@@ -260,6 +260,12 @@ describe('buildIssueUrl', () => {
     assert.equal(u.searchParams.get('template'), 'dialogue-report.yml');
     assert.equal(u.searchParams.get('title'), '[資料回報] 丹尼爾');
   });
+  test('預填欄位並略過空值', () => {
+    const u = new URL(buildIssueUrl('https://github.com/o/r', 't.yml', 'x', { name_zh: '丹尼爾', name_ja: null }));
+    assert.equal(u.searchParams.get('name_zh'), '丹尼爾');
+    assert.ok(!u.searchParams.has('name_ja'));
+  });
+
   test('省略標題時不帶 title 參數', () => {
     assert.ok(!buildIssueUrl('https://github.com/o/r', 't.yml').includes('title='));
   });
