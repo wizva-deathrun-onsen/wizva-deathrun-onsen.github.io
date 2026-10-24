@@ -8,7 +8,7 @@ import {
   ALIGNMENTS, ELEMENTS, BONDS,
   defaultState, parseQuery, serializeQuery,
   filterCharacters, sortCharacters, localized,
-  buildIssueUrl, collectContributors,
+  buildIssueUrl,
 } from './filters.js';
 import { loadStrings, format } from './i18n.js';
 import { initThemeToggle } from './theme.js';
@@ -276,8 +276,6 @@ async function main() {
   buildChips('f-align', 'align', ALIGNMENTS, strings.alignment);
   buildChips('f-elem', 'elem', ELEMENTS, strings.element);
   buildChips('f-bond', 'bond', BONDS, strings.bond);
-  $('#contributors').textContent = collectContributors(characters).join('、');
-  $('#contributors-line').hidden = !$('#contributors').textContent;
 
   syncControls();
   syncBulkButtons();

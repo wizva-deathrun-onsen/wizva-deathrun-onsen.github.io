@@ -6,7 +6,7 @@ import {
   ALIGNMENTS, ELEMENTS, BONDS,
   defaultState, parseQuery, serializeQuery,
   matchesQuery, filterCharacters, sortCharacters, hasDialogue,
-  localized, buildIssueUrl, collectContributors,
+  localized, buildIssueUrl,
 } from '../js/filters.js';
 import { format } from '../js/i18n.js';
 
@@ -50,11 +50,11 @@ const philip = make('philip', {
 const ALL = [daniel, adam, savia, unknown, philip];
 
 describe('parseQuery / serializeQuery', () => {
-  test('空 query 得到全選預設值', () => {
+  test('空 query 得到未篩選的預設值', () => {
     const s = parseQuery('');
-    assert.deepEqual([...s.align], ALIGNMENTS);
-    assert.deepEqual([...s.elem], ELEMENTS);
-    assert.deepEqual([...s.bond], BONDS);
+    assert.equal(s.align.size, 0);
+    assert.equal(s.elem.size, 0);
+    assert.equal(s.bond.size, 0);
     assert.equal(s.q, '');
     assert.equal(s.sort, 'default');
     assert.equal(s.lang, null);
@@ -78,7 +78,7 @@ describe('parseQuery / serializeQuery', () => {
     assert.equal(s.q, '丹');
   });
 
-  test('空字串參數代表全部取消勾選', () => {
+  test('空字串參數視同未篩選', () => {
     assert.equal(parseQuery('?align=').align.size, 0);
   });
 
@@ -148,7 +148,7 @@ describe('matchesQuery', () => {
 });
 
 describe('filterCharacters', () => {
-  test('全選時包含欄位為 null 的角色', () => {
+  test('未選任何值時包含欄位為 null 的角色', () => {
     assert.equal(filterCharacters(ALL, defaultState()).length, ALL.length);
   });
 
@@ -171,15 +171,15 @@ describe('filterCharacters', () => {
     const s = defaultState();
     s.elem = new Set(['earth', 'water']);
     assert.deepEqual(filterCharacters(ALL, s).map((c) => c.id), ['daniel', 'philip']);
-    s.elem = new Set(ELEMENTS);
+    s.elem = new Set();
     s.bond = new Set(['int']);
     assert.deepEqual(filterCharacters(ALL, s).map((c) => c.id), ['adam']);
   });
 
-  test('全部取消勾選時沒有結果', () => {
+  test('全選時排除該欄位為 null 的角色', () => {
     const s = defaultState();
-    s.align = new Set();
-    assert.equal(filterCharacters(ALL, s).length, 0);
+    s.align = new Set(ALIGNMENTS);
+    assert.deepEqual(filterCharacters(ALL, s).map((c) => c.id), ['daniel', 'adam', 'savia', 'philip']);
   });
 
   test('多條件為 AND', () => {
@@ -248,17 +248,6 @@ describe('buildIssueUrl', () => {
   });
   test('省略標題時不帶 title 參數', () => {
     assert.ok(!buildIssueUrl('https://github.com/o/r', 't.yml').includes('title='));
-  });
-});
-
-describe('collectContributors', () => {
-  test('去重、支援逗號與頓號分隔、忽略空白', () => {
-    const list = [
-      make('a', { contributor: 'Alice, Bob' }),
-      make('b', { contributor: '' }),
-      make('c', { contributor: 'Bob、Carol ' }),
-    ];
-    assert.deepEqual(collectContributors(list), ['Alice', 'Bob', 'Carol']);
   });
 });
 

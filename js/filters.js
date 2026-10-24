@@ -31,14 +31,14 @@ export const LANGS = ['zh', 'ja'];
  */
 
 /**
- * 回傳預設（全選、不搜尋）的篩選狀態。
+ * 回傳預設（不限制、不搜尋）的篩選狀態。清單維度為空集合代表「不篩選」。
  * @returns {FilterState}
  */
 export function defaultState() {
   return {
-    align: new Set(ALIGNMENTS),
-    elem: new Set(ELEMENTS),
-    bond: new Set(BONDS),
+    align: new Set(),
+    elem: new Set(),
+    bond: new Set(),
     q: '',
     known: true,
     sort: 'default',
@@ -48,15 +48,14 @@ export function defaultState() {
 
 /**
  * 解析逗號分隔的清單參數，只保留合法值。
- * 參數不存在時回傳全選；參數存在但為空字串時回傳空集合（使用者全部取消勾選）。
+ * 參數不存在或為空字串時回傳空集合（不篩選）。
  * @param {URLSearchParams} params
  * @param {string} key
  * @param {string[]} allowed
  * @returns {Set<string>}
  */
 function parseList(params, key, allowed) {
-  if (!params.has(key)) return new Set(allowed);
-  const values = params.get(key).split(',').map((v) => v.trim());
+  const values = (params.get(key) ?? '').split(',').map((v) => v.trim());
   return new Set(values.filter((v) => allowed.includes(v)));
 }
 
@@ -90,7 +89,7 @@ export function serializeQuery(state) {
   const params = new URLSearchParams();
   const lists = [['align', state.align, ALIGNMENTS], ['elem', state.elem, ELEMENTS], ['bond', state.bond, BONDS]];
   for (const [key, set, allowed] of lists) {
-    if (set.size !== allowed.length) {
+    if (set.size > 0) {
       params.set(key, allowed.filter((v) => set.has(v)).join(','));
     }
   }
@@ -104,14 +103,13 @@ export function serializeQuery(state) {
 
 /**
  * 判斷某個維度是否通過篩選。
- * 全選時不限制（未知值 null 也顯示）；只要有取消勾選，null 就視為不符合。
+ * 沒有選任何值時不限制（未知值 null 也顯示）；有選值時只保留選到的，null 視為不符合。
  * @param {Set<string>} selected
- * @param {string[]} allowed
  * @param {string|null} value
  * @returns {boolean}
  */
-function matchesSet(selected, allowed, value) {
-  if (selected.size === allowed.length) return true;
+function matchesSet(selected, value) {
+  if (selected.size === 0) return true;
   return value != null && selected.has(value);
 }
 
@@ -161,9 +159,9 @@ export function hasDialogue(character) {
  */
 export function filterCharacters(characters, state) {
   return characters.filter((c) =>
-    matchesSet(state.align, ALIGNMENTS, c.alignment)
-    && matchesSet(state.elem, ELEMENTS, c.element)
-    && matchesSet(state.bond, BONDS, c.bond)
+    matchesSet(state.align, c.alignment)
+    && matchesSet(state.elem, c.element)
+    && matchesSet(state.bond, c.bond)
     && (!state.known || hasDialogue(c))
     && matchesQuery(c, state.q));
 }
@@ -237,16 +235,3 @@ export function buildIssueUrl(repoUrl, template, title) {
   return `${repoUrl.replace(/\/+$/, '')}/issues/new?${params}`;
 }
 
-/**
- * 從角色清單收集不重複的貢獻者名稱，依首次出現順序。
- * contributor 欄位可用逗號或頓號分隔多人。
- * @param {Object[]} characters
- * @returns {string[]}
- */
-export function collectContributors(characters) {
-  const names = characters
-    .flatMap((c) => (c.contributor ?? '').split(/[,、]/))
-    .map((s) => s.trim())
-    .filter(Boolean);
-  return [...new Set(names)];
-}
