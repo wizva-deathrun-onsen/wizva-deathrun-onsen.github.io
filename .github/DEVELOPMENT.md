@@ -40,7 +40,7 @@ npm test        # node:test 單元測試（Node 22+）
   "rarity": "named",
   "dialogue": { "option": 2, "answer": { "zh": "得到上帝寬恕", "ja": null } },
   "bond": "str",
-  "contributor": "",
+  "contributors": [],
   "verified": true
 }
 ```
@@ -60,7 +60,7 @@ npm test        # node:test 單元測試（Node 22+）
 - 同一角色的特殊造型只收一筆，頭像使用原始造型
 - 未知欄位一律填 `null`，頁面顯示「?」或「—」
 - `avatar` 為相對路徑；沒有頭像時填 `null`，頁面顯示名稱首字
-- `contributor` 多人用逗號或頓號分隔
+- `contributors` 為字串陣列，可放多位補充者，頁面上以「、」分隔顯示
 - `id` 為 kebab-case 且不可重複（測試會檢查）
 
 ## 部署與快取
@@ -78,7 +78,7 @@ npm test       # 會檢查版本號是否一致、import map 是否涵蓋 js/ �
 ## 處理社群回報
 
 1. 在 Issue 確認內容（有截圖優先採信）
-2. 更新 `data/characters.json`，把回報者的 GitHub 帳號填進 `contributor`
+2. 更新 `data/characters.json`，把回報者加進 `contributors` 陣列
 3. 執行 `npm test` 確認資料格式正確
 4. commit 訊息附上 `Closes #<issue 編號>`，push 後 Issue 會自動關閉
 

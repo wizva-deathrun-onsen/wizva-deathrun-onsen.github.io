@@ -21,7 +21,7 @@ function make(id, overrides = {}) {
     rarity: null,
     dialogue: { option: null, answer: { zh: null, ja: null } },
     bond: null,
-    contributor: '',
+    contributors: [],
     verified: true,
     ...overrides,
   };
@@ -56,7 +56,7 @@ describe('parseQuery / serializeQuery', () => {
     assert.equal(s.elem.size, 0);
     assert.equal(s.bond.size, 0);
     assert.equal(s.q, '');
-    assert.equal(s.sort, 'default');
+    assert.equal(s.sort, 'alignment');
     assert.equal(s.lang, null);
     assert.equal(s.known, true);
   });
@@ -84,7 +84,7 @@ describe('parseQuery / serializeQuery', () => {
 
   test('不合法的 sort / lang 退回預設', () => {
     const s = parseQuery('?sort=option&lang=en');
-    assert.equal(s.sort, 'default');
+    assert.equal(s.sort, 'alignment');
     assert.equal(s.lang, null);
   });
 
@@ -197,9 +197,23 @@ describe('filterCharacters', () => {
 });
 
 describe('sortCharacters', () => {
-  test('default 依性格排序，未標註排最後，同性格保持原順序', () => {
-    assert.deepEqual(sortCharacters(ALL, 'default', 'zh').map((c) => c.id),
-      ['daniel', 'philip', 'adam', 'savia', 'alex']);
+  test('alignment 依性格排序，未標註排最後，同性格依編號', () => {
+    const list = [
+      make('g2', { alignment: 'good', no: 2016 }),
+      make('e1', { alignment: 'evil', no: 2001 }),
+      make('g1', { alignment: 'good', no: 68 }),
+      make('u', { no: 1 }),
+    ];
+    assert.deepEqual(sortCharacters(list, 'alignment', 'zh').map((c) => c.id), ['g1', 'g2', 'e1', 'u']);
+  });
+
+  test('任何排序在同值時都依編號，編號未知排最後', () => {
+    const list = [make('x', { bond: 'str' }), make('b', { bond: 'str', no: 2016 }), make('a', { bond: 'str', no: 68 })];
+    assert.deepEqual(sortCharacters(list, 'bond', 'zh').map((c) => c.id), ['a', 'b', 'x']);
+  });
+
+  test('舊的 sort=default 連結退回性格排序', () => {
+    assert.equal(parseQuery('?sort=default').sort, 'alignment');
   });
 
 

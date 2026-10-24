@@ -200,7 +200,9 @@ function renderRow(c) {
       ? el('span', { className: 'option', textContent: String(option) })
       : el('span', { className: 'missing', textContent: strings.ui.unknown })),
     cell('colAnswer', localizedText(answer, strings.ui.unknown),
-      ...(c.contributor ? [el('span', { className: 'contributor', textContent: format(strings.ui.contributedBy, { name: c.contributor }) })] : [])),
+      ...(c.contributors?.length
+        ? [el('span', { className: 'contributor', textContent: format(strings.ui.contributedBy, { name: c.contributors.join('、') }) })]
+        : [])),
     cell('colBond', badge('bond', c.bond)),
     cell('colReport', report),
   );

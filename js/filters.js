@@ -13,7 +13,7 @@ export const ELEMENTS = ['light', 'dark', 'water', 'fire', 'wind', 'earth', 'non
 export const BONDS = ['str', 'int', 'agi', 'fai', 'luk', 'spi'];
 
 /** 可用的排序鍵。 */
-export const SORT_KEYS = ['default', 'no', 'name', 'bond'];
+export const SORT_KEYS = ['alignment', 'no', 'name', 'bond'];
 
 /** 支援的語言。 */
 export const LANGS = ['zh', 'ja'];
@@ -41,7 +41,7 @@ export function defaultState() {
     bond: new Set(),
     q: '',
     known: true,
-    sort: 'default',
+    sort: 'alignment',
     lang: null,
   };
 }
@@ -74,7 +74,7 @@ export function parseQuery(search) {
     bond: parseList(params, 'bond', BONDS),
     q: (params.get('q') ?? '').trim(),
     known: params.get('show') !== 'all',
-    sort: SORT_KEYS.includes(sort) ? sort : 'default',
+    sort: SORT_KEYS.includes(sort) ? sort : 'alignment',
     lang: LANGS.includes(lang) ? lang : null,
   };
 }
@@ -95,7 +95,7 @@ export function serializeQuery(state) {
   }
   if (state.q) params.set('q', state.q);
   if (!state.known) params.set('show', 'all');
-  if (state.sort && state.sort !== 'default') params.set('sort', state.sort);
+  if (state.sort && state.sort !== 'alignment') params.set('sort', state.sort);
   if (state.lang) params.set('lang', state.lang);
   const str = params.toString().replaceAll('%2C', ',');
   return str ? `?${str}` : '';
@@ -193,8 +193,10 @@ function byOrder(order) {
 }
 
 /**
- * 排序角色清單，回傳新陣列。同值時保持原本資料順序（Array.prototype.sort 為 stable）。
- * - default：依性格（善→中立→惡→未標註）
+ * 排序角色清單，回傳新陣列。
+ * 一律先依編號排序（未知排最後），再依選擇的鍵排序；Array.prototype.sort 為 stable，
+ * 所以選擇的鍵相同時會維持編號順序。
+ * - alignment：依性格（善→中立→惡→未標註）
  * - no：依角色編號，未知排最後
  * - name：依目前語言的名稱，locale-aware
  * - bond：依緣份 力→靈，未知排最後
@@ -204,17 +206,16 @@ function byOrder(order) {
  * @returns {Object[]}
  */
 export function sortCharacters(characters, key, lang) {
-  const list = [...characters];
+  const no = (c) => c.no ?? Infinity;
+  const list = [...characters].sort((a, b) => no(a) - no(b));
   switch (key) {
     case 'name': {
       const collator = new Intl.Collator(lang === 'ja' ? 'ja' : 'zh-Hant-TW');
       const name = (c) => localized(c.name, lang).text ?? '';
       return list.sort((a, b) => collator.compare(name(a), name(b)));
     }
-    case 'no': {
-      const no = (c) => c.no ?? Infinity;
-      return list.sort((a, b) => no(a) - no(b));
-    }
+    case 'no':
+      return list;
     case 'bond':
       return list.sort((a, b) => byOrder(BONDS)(a.bond, b.bond));
     default:
