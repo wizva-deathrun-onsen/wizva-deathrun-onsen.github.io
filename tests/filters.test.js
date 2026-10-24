@@ -1,6 +1,6 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 
 import {
   ALIGNMENTS, ELEMENTS, BONDS,
@@ -261,6 +261,14 @@ describe('data/characters.json', () => {
       assert.ok(c.name.zh || c.name.ja, `${c.id} 至少需要一種語言的名稱`);
       assert.ok(c.no === null || Number.isInteger(c.no), `${c.id} 編號需為整數或 null`);
       assert.equal(typeof c.verified, 'boolean', c.id);
+    }
+  });
+
+  test('avatar 為相對路徑且檔案存在', () => {
+    for (const c of data) {
+      if (c.avatar === null) continue;
+      assert.ok(!c.avatar.startsWith('/'), `${c.id} avatar 必須是相對路徑`);
+      assert.ok(existsSync(new URL(`../${c.avatar}`, import.meta.url)), `${c.id} 找不到 ${c.avatar}`);
     }
   });
 

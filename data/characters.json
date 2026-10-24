@@ -6,7 +6,7 @@
       "zh": "丹尼爾",
       "ja": "ダニエル"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/daniel.webp",
     "alignment": "good",
     "element": "earth",
     "rarity": "named",
@@ -28,7 +28,7 @@
       "zh": "埃卡特",
       "ja": "エッカルト"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/eckart.webp",
     "alignment": "good",
     "element": "fire",
     "rarity": "named",
@@ -50,7 +50,7 @@
       "zh": "亞莎",
       "ja": "アーシャ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/asha.webp",
     "alignment": "good",
     "element": "fire",
     "rarity": "named",
@@ -72,7 +72,7 @@
       "zh": "克洛艾",
       "ja": "クロエ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/chloe.webp",
     "alignment": "good",
     "element": "fire",
     "rarity": "named",
@@ -94,7 +94,7 @@
       "zh": "瓦爾多爾",
       "ja": "ヴァルドル"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/valdor.webp",
     "alignment": "good",
     "element": "light",
     "rarity": "named",
@@ -116,7 +116,7 @@
       "zh": "拉納維爾",
       "ja": "ラナヴィーユ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/lanavaille.webp",
     "alignment": "good",
     "element": "fire",
     "rarity": "legendary",
@@ -138,7 +138,7 @@
       "zh": "武源",
       "ja": "ブゲン"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/bugen.webp",
     "alignment": "good",
     "element": "earth",
     "rarity": "named",
@@ -160,7 +160,7 @@
       "zh": "貝卡南",
       "ja": "ベルカナン"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/berkanan.webp",
     "alignment": "good",
     "element": "fire",
     "rarity": "legendary",
@@ -182,7 +182,7 @@
       "zh": "莉瓦娜",
       "ja": "リヴァナ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/livana.webp",
     "alignment": "good",
     "element": "water",
     "rarity": "legendary",
@@ -204,7 +204,7 @@
       "zh": "歐拉莉亞",
       "ja": "エウラリア"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/eulalia.webp",
     "alignment": "good",
     "element": "water",
     "rarity": "named",
@@ -226,7 +226,7 @@
       "zh": "雅蓓妮斯",
       "ja": "アベニウス"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/abenius.webp",
     "alignment": "good",
     "element": "light",
     "rarity": "legendary",
@@ -248,7 +248,7 @@
       "zh": "卡米爾",
       "ja": "カミール"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/camille.webp",
     "alignment": "good",
     "element": "fire",
     "rarity": "named",
@@ -270,7 +270,7 @@
       "zh": "銀蓮",
       "ja": "アネモネ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/anemone.webp",
     "alignment": "good",
     "element": "light",
     "rarity": "legendary",
@@ -292,7 +292,7 @@
       "zh": "瑪麗安娜",
       "ja": "マリアンヌ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/marianne.webp",
     "alignment": "good",
     "element": "wind",
     "rarity": "named",
@@ -314,7 +314,7 @@
       "zh": "亞當",
       "ja": "アダム"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/adam.webp",
     "alignment": "evil",
     "element": "light",
     "rarity": "legendary",
@@ -336,7 +336,7 @@
       "zh": "哲魯夫",
       "ja": "ゲルルフ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/gerulf.webp",
     "alignment": "evil",
     "element": "fire",
     "rarity": "legendary",
@@ -358,7 +358,7 @@
       "zh": "夏莉莉妮雅",
       "ja": "シェリリーニャ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/shelirionach.webp",
     "alignment": "evil",
     "element": "dark",
     "rarity": "legendary",
@@ -380,7 +380,7 @@
       "zh": "切羽",
       "ja": "キリハ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/kiriha.webp",
     "alignment": "evil",
     "element": "dark",
     "rarity": "named",
@@ -402,7 +402,7 @@
       "zh": "阿米莉婭",
       "ja": "アメリア"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/amelia.webp",
     "alignment": "evil",
     "element": "fire",
     "rarity": "named",
@@ -424,7 +424,7 @@
       "zh": "愛麗絲",
       "ja": "アリス"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/alice.webp",
     "alignment": "evil",
     "element": "water",
     "rarity": "legendary",
@@ -446,7 +446,7 @@
       "zh": "甘道夫",
       "ja": "ガンドルフォ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/gandolfo.webp",
     "alignment": "evil",
     "element": "dark",
     "rarity": "named",
@@ -468,7 +468,7 @@
       "zh": "巴克什",
       "ja": "バケシュ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/bakesh.webp",
     "alignment": "evil",
     "element": "wind",
     "rarity": "named",
@@ -490,7 +490,7 @@
       "zh": "米拉娜",
       "ja": "ミラナ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/milana.webp",
     "alignment": "evil",
     "element": "dark",
     "rarity": "named",
@@ -512,7 +512,7 @@
       "zh": "嘉莉娜",
       "ja": "ガリーナ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/galina.webp",
     "alignment": "evil",
     "element": "earth",
     "rarity": "named",
@@ -534,7 +534,7 @@
       "zh": "薇薇安娜",
       "ja": "ビビアナ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/viviana.webp",
     "alignment": "evil",
     "element": "water",
     "rarity": "named",
@@ -556,7 +556,7 @@
       "zh": "迦魯巴多斯",
       "ja": "ガルバドゥス"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/galbadus.webp",
     "alignment": "evil",
     "element": "dark",
     "rarity": "legendary",
@@ -578,7 +578,7 @@
       "zh": "凜音",
       "ja": "リンネ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/rinne.webp",
     "alignment": "evil",
     "element": "dark",
     "rarity": "legendary",
@@ -600,7 +600,7 @@
       "zh": "埃爾達",
       "ja": "エルダー"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/elda.webp",
     "alignment": "evil",
     "element": "dark",
     "rarity": "named",
@@ -622,7 +622,7 @@
       "zh": "柚奈壬姬",
       "ja": "ユズナミキ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/yuzunamiki.webp",
     "alignment": "evil",
     "element": "earth",
     "rarity": "legendary",
@@ -644,7 +644,7 @@
       "zh": "薩維亞",
       "ja": "サヴィア"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/savia.webp",
     "alignment": "evil",
     "element": "dark",
     "rarity": "legendary",
@@ -666,7 +666,7 @@
       "zh": "拉斐洛",
       "ja": "ラファエロ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/raffaello.webp",
     "alignment": "evil",
     "element": "fire",
     "rarity": "legendary",
@@ -688,7 +688,7 @@
       "zh": "耶米勒",
       "ja": "ヤルミル"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/jarmil.webp",
     "alignment": "evil",
     "element": "wind",
     "rarity": "named",
@@ -710,7 +710,7 @@
       "zh": "菲利希婭",
       "ja": "フィリシア"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/phyllisia.webp",
     "alignment": "evil",
     "element": "dark",
     "rarity": "legendary",
@@ -732,7 +732,7 @@
       "zh": "菲利普",
       "ja": "フィリプ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/philip.webp",
     "alignment": "neutral",
     "element": "water",
     "rarity": "named",
@@ -754,7 +754,7 @@
       "zh": "葉卡捷琳娜",
       "ja": "エカテリーナ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/yekaterina.webp",
     "alignment": "neutral",
     "element": "earth",
     "rarity": "legendary",
@@ -776,7 +776,7 @@
       "zh": "獅櫻",
       "ja": "シオウ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/shiou.webp",
     "alignment": "neutral",
     "element": "wind",
     "rarity": "legendary",
@@ -798,7 +798,7 @@
       "zh": "讓",
       "ja": "ジャン"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/jean.webp",
     "alignment": "neutral",
     "element": "earth",
     "rarity": "named",
@@ -820,7 +820,7 @@
       "zh": "芭芭拉",
       "ja": "バルバラ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/barbara.webp",
     "alignment": "neutral",
     "element": "wind",
     "rarity": "named",
@@ -842,7 +842,7 @@
       "zh": "艾莉賽",
       "ja": "エリゼ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/elise.webp",
     "alignment": "neutral",
     "element": "earth",
     "rarity": "named",
@@ -864,7 +864,7 @@
       "zh": "芙爾特",
       "ja": "フルート"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/flut.webp",
     "alignment": "neutral",
     "element": "water",
     "rarity": "named",
@@ -886,7 +886,7 @@
       "zh": "奧利芙",
       "ja": "オリーブ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/olive.webp",
     "alignment": "neutral",
     "element": "wind",
     "rarity": "named",
@@ -908,7 +908,7 @@
       "zh": "奧菲麗雅",
       "ja": "オフェーリア"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/ophelia.webp",
     "alignment": "neutral",
     "element": "wind",
     "rarity": "named",
@@ -930,7 +930,7 @@
       "zh": "克拉麗莎",
       "ja": "クラリーサ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/clarissa.webp",
     "alignment": "neutral",
     "element": "light",
     "rarity": "named",
@@ -952,7 +952,7 @@
       "zh": "奧爾德里克",
       "ja": "オルドリック"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/aldric.webp",
     "alignment": "neutral",
     "element": "wind",
     "rarity": "legendary",
@@ -974,7 +974,7 @@
       "zh": "迪諾",
       "ja": "ディノ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/dino.webp",
     "alignment": "neutral",
     "element": "wind",
     "rarity": "named",
@@ -996,7 +996,7 @@
       "zh": "阿爾博里斯",
       "ja": "アルボリス"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/arboris.webp",
     "alignment": "neutral",
     "element": "earth",
     "rarity": "legendary",
@@ -1018,7 +1018,7 @@
       "zh": "本傑明",
       "ja": "ベンジャミン"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/benjamin.webp",
     "alignment": "neutral",
     "element": "earth",
     "rarity": "named",
@@ -1040,7 +1040,7 @@
       "zh": "黛波拉",
       "ja": "デボラ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/debra.webp",
     "alignment": "neutral",
     "element": "light",
     "rarity": "legendary",
@@ -1062,7 +1062,7 @@
       "zh": "普利修",
       "ja": "プリッシュ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/prishe.webp",
     "alignment": "neutral",
     "element": "light",
     "rarity": "legendary",
@@ -1084,7 +1084,7 @@
       "zh": "海因里科",
       "ja": "ハインリコ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/heinrico.webp",
     "alignment": "neutral",
     "element": "earth",
     "rarity": "named",
@@ -1106,7 +1106,7 @@
       "zh": "埃爾多拉多",
       "ja": "エルドラド"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/eldorado.webp",
     "alignment": "good",
     "element": "dark",
     "rarity": "named",
@@ -1128,7 +1128,7 @@
       "zh": "亞曆克斯",
       "ja": "アレックス"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/alex.webp",
     "alignment": "good",
     "element": "fire",
     "rarity": "named",
@@ -1150,7 +1150,7 @@
       "zh": "埃米爾",
       "ja": "エーミル"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/emil.webp",
     "alignment": "good",
     "element": "light",
     "rarity": "named",
@@ -1172,7 +1172,7 @@
       "zh": "莉娜莉亞",
       "ja": "リナリア"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/linaria.webp",
     "alignment": "evil",
     "element": "dark",
     "rarity": "legendary",
@@ -1194,7 +1194,7 @@
       "zh": "艾妮琪",
       "ja": "アイニッキ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/ainikki.webp",
     "alignment": "good",
     "element": "fire",
     "rarity": "legendary",
@@ -1216,7 +1216,7 @@
       "zh": "伊亞瑪斯",
       "ja": "イアルマス"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/iarumas.webp",
     "alignment": "neutral",
     "element": "none",
     "rarity": "legendary",
@@ -1238,7 +1238,7 @@
       "zh": "吉拉德",
       "ja": "ジラルド"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/gerard.webp",
     "alignment": "good",
     "element": "dark",
     "rarity": "legendary",
@@ -1260,7 +1260,7 @@
       "zh": "紅鬍子",
       "ja": "赤ひげ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/red-beard.webp",
     "alignment": "neutral",
     "element": "dark",
     "rarity": "legendary",
@@ -1282,7 +1282,7 @@
       "zh": "加斯頓",
       "ja": "ガストン"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/gaston.webp",
     "alignment": "evil",
     "element": "earth",
     "rarity": "named",
@@ -1304,7 +1304,7 @@
       "zh": "基利昂",
       "ja": "ギリオン"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/gillion.webp",
     "alignment": "neutral",
     "element": "dark",
     "rarity": "legendary",
@@ -1326,7 +1326,7 @@
       "zh": "艾爾文",
       "ja": "エルヴィン"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/erwin.webp",
     "alignment": "neutral",
     "element": "fire",
     "rarity": "legendary",
@@ -1348,7 +1348,7 @@
       "zh": "尤爾薩",
       "ja": "ユルサ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/yrsa.webp",
     "alignment": "good",
     "element": "water",
     "rarity": "legendary",
@@ -1370,7 +1370,7 @@
       "zh": "宵藏",
       "ja": "ヨイゾウ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/yoizou.webp",
     "alignment": "good",
     "element": "fire",
     "rarity": "legendary",
@@ -1392,7 +1392,7 @@
       "zh": "影狼",
       "ja": "カゲロウ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/kagero.webp",
     "alignment": "evil",
     "element": "wind",
     "rarity": "legendary",
@@ -1414,7 +1414,7 @@
       "zh": "賽德",
       "ja": "ザイド"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/zeid.webp",
     "alignment": "evil",
     "element": "dark",
     "rarity": "legendary",
@@ -1436,7 +1436,7 @@
       "zh": "五郎八",
       "ja": "イロハ"
     },
-    "avatar": null,
+    "avatar": "assets/avatars/iroha.webp",
     "alignment": "good",
     "element": "fire",
     "rarity": "legendary",
