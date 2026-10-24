@@ -1,6 +1,6 @@
-# 檢查社群回報 Issue 的必填欄位：性格、屬性，以及「正確選項」或「選項文字」至少一項。
-# GitHub Issue Form 的下拉選單無法「預設不選又必填」，所以改在送出後檢查：
-# 缺欄位就加上「資料不完整」並留言提醒；回報者編輯補齊後自動移除 label。
+# 檢查社群回報 Issue 的必填欄位：性格、屬性、正確選項。
+# 表單本身已設為必填，這裡是備援：回報者之後編輯 Issue 刪掉內容、或用舊版表單送出時，
+# 缺欄位就加上「資料不完整」並留言提醒；補齊後自動移除 label。
 name: Validate report
 
 on:
@@ -29,15 +29,12 @@ jobs:
             const field = (label) => {
               const m = body.match(new RegExp("###\\s*" + label + "[^\\n]*\\n+([\\s\\S]*?)(?=\\n###|$)"));
               const v = (m ? m[1] : "").trim();
-              // 「請選擇」是性格／屬性下拉選單的佔位選項，等同沒填。
-              return v === "_No response_" || v === "請選擇" ? "" : v;
+              return v === "_No response_" ? "" : v;
             };
             const missing = [];
             if (!field("性格")) missing.push("性格");
             if (!field("屬性")) missing.push("屬性");
-            // 正確選項選「不確定」等同沒填，此時必須有選項文字。
-            const option = field("正確選項");
-            if ((!option || option === "不確定") && !field("選項文字")) missing.push("正確選項或選項文字（至少一項）");
+            if (!field("正確選項")) missing.push("正確選項");
             console.log(missing.join("、"));
           ')
           has_label=$(node -e 'console.log(JSON.parse(process.env.LABELS).includes("資料不完整"))')

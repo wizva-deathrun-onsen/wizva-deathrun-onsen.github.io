@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         感謝回報！請只回報 **送死流**（隊伍有成員陣亡後泡泉水）觸發的固定對話，一般泉水的隨機對話不適用。
-        **必填：角色名稱、性格、屬性，以及「正確選項」或「選項文字」至少一項**（兩項都填最好）；其他不確定的欄位可以留空。
+        **必填：角色名稱、性格、屬性、正確選項**（不確定可選「不確定」）；選項文字請盡量填寫，其他不確定的欄位可以留空。
         送出後系統會自動檢查，缺少必填欄位會留言提醒。維護者審核後會更新到網站並把你列為補充者。
 
   - type: input
@@ -27,16 +27,13 @@ body:
     validations:
       required: false
 
-  # GitHub 的必填下拉選單會預設選第一項。性格與屬性要顯示必填的紅色 *，
-  # 所以第一項放「請選擇」佔住預設值，送出後由 validate-report.yml 把它當成未填。
-  # 其他下拉選單維持非必填（預設為 None），避免回報者忘了改而送出錯誤值。
+  # 下拉選單預設為 None；設成必填時 GitHub 會要求回報者主動選擇才能送出。
   - type: dropdown
     id: alignment
     attributes:
       label: 性格
       description: 請依角色實際性格選擇
       options:
-        - 請選擇
         - 善
         - 中立
         - 惡
@@ -49,7 +46,6 @@ body:
       label: 屬性
       description: 請依角色實際屬性選擇
       options:
-        - 請選擇
         - 光
         - 暗
         - 水
@@ -63,20 +59,20 @@ body:
   - type: dropdown
     id: option
     attributes:
-      label: 正確選項（與選項文字擇一必填）
-      description: 由上往下數的第幾個選項；兩項都填最好
+      label: 正確選項
+      description: 由上往下數的第幾個選項；不確定時選「不確定」，並盡量填寫選項文字
       options:
         - "1"
         - "2"
         - "3"
         - 不確定
     validations:
-      required: false
+      required: true
 
   - type: input
     id: answer
     attributes:
-      label: 選項文字（與正確選項擇一必填）
+      label: 選項文字
       description: 正確選項的文字，中文或日文皆可
       placeholder: 例如：得到上帝寬恕
     validations:

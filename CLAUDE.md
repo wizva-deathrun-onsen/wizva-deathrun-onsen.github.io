@@ -14,7 +14,7 @@ curl -s "https://api.github.com/repos/wizva-deathrun-onsen/wizva-deathrun-onsen.
 
 每筆回報：
 
-1. 欄位顯示 `_No response_` 代表沒填。必填為性格、屬性，以及「正確選項」或「選項文字」至少一項；缺的時候不要猜，先在 Issue 留言詢問
+1. 欄位顯示 `_No response_` 代表沒填。必填為性格、屬性、正確選項（可為「不確定」）；缺的時候不要猜，先在 Issue 留言詢問。正確選項是「不確定」且沒有選項文字的回報沒有可更新的內容，留言詢問後再處理
 2. 用 Issue 的日文名找到 `data/characters.json` 的角色，核對性格、屬性；不一致時先問維護者
 3. 更新 `dialogue.option`、`dialogue.answer`；選項文字是日文就放 `answer.ja`
 4. 回報者暱稱（備註欄「回報者」）加進 `contributors`；有明確文字後 `verified` 設為 `true`
