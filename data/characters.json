@@ -256,7 +256,7 @@
       "option": 1,
       "answer": {
         "zh": "死後什麼都不會留下",
-        "ja": null
+        "ja": "死んだら何も残らない"
       }
     },
     "bond": null,
@@ -1245,7 +1245,7 @@
     "dialogue": {
       "option": null,
       "answer": {
-        "zh": null,
+        "zh": "我不會死的",
         "ja": null
       }
     },
