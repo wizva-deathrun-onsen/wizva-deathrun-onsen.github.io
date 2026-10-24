@@ -22,15 +22,15 @@
     快取版本號：每次部署前執行 `npm run bump` 更新（會同時改 CSS 與 import map）。
     import map 讓各 JS module 帶上 ?v=，瀏覽器才不會混用新舊版本的檔案。
   -->
-  <link rel="stylesheet" href="css/style.css?v=202610242158">
+  <link rel="stylesheet" href="css/style.css?v=202610242207">
   <script type="importmap">
     {
       "imports": {
-        "./js/app.js": "./js/app.js?v=202610242158",
-        "./js/config.js": "./js/config.js?v=202610242158",
-        "./js/filters.js": "./js/filters.js?v=202610242158",
-        "./js/i18n.js": "./js/i18n.js?v=202610242158",
-        "./js/theme.js": "./js/theme.js?v=202610242158"
+        "./js/app.js": "./js/app.js?v=202610242207",
+        "./js/config.js": "./js/config.js?v=202610242207",
+        "./js/filters.js": "./js/filters.js?v=202610242207",
+        "./js/i18n.js": "./js/i18n.js?v=202610242207",
+        "./js/theme.js": "./js/theme.js?v=202610242207"
       }
     }
   </script>
@@ -63,7 +63,18 @@
             <li>準備幾隻 LV1 的送死角色（推薦無名僧侶），最少 2 隻。</li>
             <li>注意面具人（主角）的性格，以及預計要成為有緣人的角色性格。<br>
               例如：要刷丹尼爾（力緣），因為他是善角色，若面具人（主角）不是中立，隊伍中需要有其他善角色才行。</li>
+            <li>預計要刷緣的角色已經通過兩章不同的大異形（建議打第 1、2 章即可），並升到青銅階（約 33 等上下比較保險）。</li>
           </ol>
+          <figure>
+            <img src="assets/guide/party-example.webp" width="720" height="307" loading="lazy"
+                 alt="隊伍配置範例：多位目標角色搭配一名 Lv.1 的送死角色">
+            <figcaption>隊伍配置範例：Lv.1 的「死1」為送死角色</figcaption>
+          </figure>
+          <figure>
+            <img class="narrow" src="assets/guide/bronze-rank.webp" width="560" height="118" loading="lazy"
+                 alt="角色等級畫面：Lv.34，等級上限 40（青銅階）">
+            <figcaption>青銅階的角色：等級上限顯示為 /40</figcaption>
+          </figure>
 
           <h2>實際流程</h2>
           <ol>
@@ -82,11 +93,12 @@
               </figure>
             </li>
             <li>哈肯離開，LV1 角色若有意志力，會直接以 1 滴血復活。</li>
-            <li>重複步驟 1。</li>
+            <li>刷的過程中如果發現目標角色出現淫紋，就可以回去遣散開箱：緣 LV5 恭喜，緣 LV4 再接再厲。</li>
+            <li>還沒出現淫紋的話，重複步驟 1。</li>
           </ol>
 
           <h2>補充說明</h2>
-          <p>也可以利用已經有<span class="term">淫紋<button type="button" class="hint" aria-label="淫紋說明" aria-describedby="hint-mark">?</button><span class="tooltip" role="tooltip" id="hint-mark">滿好感且通過至少兩次不同大異形的角色</span></span>的角色來刷。
+          <p>也可以利用已經有<span class="term">淫紋<button type="button" class="hint" aria-label="淫紋說明" aria-describedby="hint-mark">?</button><span class="tooltip" role="tooltip" id="hint-mark">滿好感且通過至少兩次不同大異形的角色。出現時，角色基本資訊左上角會有這個圖示：<img src="assets/guide/mark-icon.webp" width="260" height="98" alt="角色基本資訊左上角的淫紋圖示"></span></span>的角色來刷。
             例如夏莉莉妮雅（惡）已經有淫紋，比較容易觸發對話；只要把想刷的角色帶在同一個隊伍，就能提高增加好感度的機會。</p>
         </div>
       </details>

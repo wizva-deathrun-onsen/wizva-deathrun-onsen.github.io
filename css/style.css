@@ -220,6 +220,15 @@ a { color: var(--link); }
   border-radius: var(--radius);
   border: 1px solid var(--border);
 }
+.guide-body img.narrow { max-width: 400px; }
+.tooltip img {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin-top: 6px;
+  border-radius: 4px;
+}
 .guide-body figcaption { margin-top: 4px; font-size: 0.8rem; color: var(--muted); }
 .subtitle { margin: 4px 0 0; color: var(--muted); }
 .notice {
