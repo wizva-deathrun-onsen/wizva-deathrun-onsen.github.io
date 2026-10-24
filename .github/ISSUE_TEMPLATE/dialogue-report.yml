@@ -7,16 +7,17 @@ body:
     attributes:
       value: |
         感謝回報！請只回報 **送死流**（隊伍有成員陣亡後泡泉水）觸發的固定對話，一般泉水的隨機對話不適用。
-        不確定的欄位可以留空或選「不確定」，維護者審核後會更新到網站並把你列為補充者。
+        **角色名稱、性格、正確選項為必填**；其他不確定的欄位可以留空或選「不確定」。
+        送出後系統會自動檢查，缺少必填欄位會留言提醒。維護者審核後會更新到網站並把你列為補充者。
 
   - type: input
     id: name_zh
     attributes:
       label: 角色名稱（中文）
-      description: 以遊戲繁中版譯名為準
+      description: 以遊戲繁中版譯名為準；不知道中文名可以填日文
       placeholder: 丹尼爾
     validations:
-      required: false
+      required: true
 
   - type: input
     id: name_ja

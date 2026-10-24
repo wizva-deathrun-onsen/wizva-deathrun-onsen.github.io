@@ -23,4 +23,5 @@ jobs:
           gh label create "data-report" --color "0e8a16" --description "社群回報的對話資料" --force
           gh label create "待審核" --color "fbca04" --description "新回報，等待維護者人工確認" --force
           gh label create "已確認" --color "1d76db" --description "維護者已確認，可以更新到網站" --force
+          gh label create "資料不完整" --color "e99695" --description "缺少必填欄位，等待回報者補充" --force
           gh label create "資料有誤" --color "d93f0b" --description "內容有問題，不採用" --force

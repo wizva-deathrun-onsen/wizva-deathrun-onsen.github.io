@@ -1,0 +1,45 @@
+# 檢查社群回報 Issue 是否填了必填欄位（性格、正確選項）。
+# GitHub Issue Form 的下拉選單無法「預設不選又必填」，所以改在送出後檢查：
+# 缺欄位就加上「資料不完整」並留言提醒；回報者編輯補齊後自動移除 label。
+name: Validate report
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  issues: write
+
+jobs:
+  validate:
+    if: contains(github.event.issue.labels.*.name, 'data-report')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check required fields
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.issue.number }}
+          BODY: ${{ github.event.issue.body }}
+          LABELS: ${{ toJSON(github.event.issue.labels.*.name) }}
+        run: |
+          missing=$(node -e '
+            const body = process.env.BODY || "";
+            // Issue Form 會把每個欄位輸出成「### 標題」加內容，沒填時為 _No response_。
+            const field = (label) => {
+              const m = body.match(new RegExp("###\\s*" + label + "[^\\n]*\\n+([\\s\\S]*?)(?=\\n###|$)"));
+              const v = (m ? m[1] : "").trim();
+              return v === "_No response_" ? "" : v;
+            };
+            const required = ["性格", "正確選項"];
+            console.log(required.filter((l) => !field(l)).join("、"));
+          ')
+          has_label=$(node -e 'console.log(JSON.parse(process.env.LABELS).includes("資料不完整"))')
+          if [ -n "$missing" ]; then
+            if [ "$has_label" != "true" ]; then
+              gh issue edit "$NUMBER" --add-label "資料不完整"
+              gh issue comment "$NUMBER" --body "感謝回報！以下必填欄位還沒選擇：**${missing}**。請點右上角「⋯ → Edit」補上，補齊後這則提醒的標籤會自動移除。"
+            fi
+          elif [ "$has_label" = "true" ]; then
+            gh issue edit "$NUMBER" --remove-label "資料不完整"
+          fi
