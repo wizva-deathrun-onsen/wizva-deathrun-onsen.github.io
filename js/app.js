@@ -10,12 +10,12 @@ import {
   filterCharacters, sortCharacters, localized,
   buildIssueUrl, collectContributors,
 } from './filters.js';
-import { loadLang, saveLang, resolveLang, loadStrings, format } from './i18n.js';
+import { loadStrings, format } from './i18n.js';
 import { initThemeToggle } from './theme.js';
 
 /** @type {import('./filters.js').FilterState} */
 let state;
-/** 目前顯示語言，'zh' | 'ja'。 */
+/** 名稱與對話的顯示語言，預設 'zh'；只能透過 URL `?lang=ja` 切換，頁面上沒有切換按鈕。 */
 let lang;
 let strings;
 let characters = [];
@@ -108,9 +108,6 @@ function syncControls() {
   }
   $('#q').value = state.q;
   $('#sort').value = state.sort;
-  for (const b of document.querySelectorAll('[data-lang]')) {
-    b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
-  }
 }
 
 /**
@@ -169,10 +166,16 @@ function renderRow(c) {
   const answer = localized(c.dialogue?.answer, lang);
   const option = c.dialogue?.option;
 
-  const nameCell = cell('colName', localizedText(name, strings.ui.unknown));
+  // 名稱固定兩行：中文為主、日文為輔，缺少的一方顯示佔位文字，讓每列高度一致。
+  const zhLine = el('span', { className: 'name-zh' },
+    c.name.zh ? el('span', { textContent: c.name.zh }) : el('span', { className: 'missing', textContent: strings.ui.nameZhMissing }));
   if (!c.verified) {
-    nameCell.append(el('span', { className: 'unverified', textContent: strings.ui.unverified, title: strings.ui.unverifiedHint }));
+    zhLine.append(el('span', { className: 'unverified', textContent: strings.ui.unverified, title: strings.ui.unverifiedHint }));
   }
+  const jaLine = c.name.ja
+    ? el('span', { className: 'name-ja', lang: 'ja', textContent: c.name.ja })
+    : el('span', { className: 'name-ja missing', textContent: strings.ui.nameJaMissing });
+  const nameCell = cell('colName', zhLine, jaLine);
 
   // 回報標題固定用中文名，方便維護者搜尋；沒有中文名時用日文名。
   const titleName = c.name.zh ?? c.name.ja ?? c.id;
@@ -223,7 +226,7 @@ function update() {
   render();
 }
 
-/** 綁定搜尋、排序、語言、重設的事件。 */
+/** 綁定搜尋、排序、重設的事件。 */
 function bindEvents() {
   $('#q').addEventListener('input', (e) => {
     state.q = e.target.value.trim();
@@ -233,14 +236,6 @@ function bindEvents() {
     state.sort = e.target.value;
     update();
   });
-  for (const b of document.querySelectorAll('[data-lang]')) {
-    b.addEventListener('click', () => {
-      lang = b.dataset.lang;
-      saveLang(lang);
-      syncControls();
-      update();
-    });
-  }
   $('#reset').addEventListener('click', () => {
     state = defaultState();
     syncControls();
@@ -265,7 +260,7 @@ async function main() {
   }
 
   state = parseQuery(location.search);
-  lang = resolveLang(state.lang, loadLang(), navigator.language);
+  lang = state.lang ?? 'zh';
 
   applyStaticStrings();
   applyLinks();

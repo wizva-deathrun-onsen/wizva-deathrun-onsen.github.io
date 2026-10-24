@@ -8,7 +8,7 @@ import {
   matchesQuery, filterCharacters, sortCharacters,
   localized, buildIssueUrl, collectContributors,
 } from '../js/filters.js';
-import { resolveLang, format } from '../js/i18n.js';
+import { format } from '../js/i18n.js';
 
 /** 建立測試用角色，未指定的欄位為 null。 */
 function make(id, overrides = {}) {
@@ -230,13 +230,6 @@ describe('collectContributors', () => {
 });
 
 describe('i18n helpers', () => {
-  test('resolveLang 優先序：URL > storage > navigator > zh', () => {
-    assert.equal(resolveLang('ja', 'zh', 'zh-TW'), 'ja');
-    assert.equal(resolveLang(null, 'ja', 'zh-TW'), 'ja');
-    assert.equal(resolveLang(null, null, 'ja-JP'), 'ja');
-    assert.equal(resolveLang(null, null, 'en-US'), 'zh');
-    assert.equal(resolveLang('fr', 'xx'), 'zh');
-  });
   test('format 替換佔位符並保留未知鍵', () => {
     assert.equal(format('{shown}/{total} {x}', { shown: 1, total: 2 }), '1/2 {x}');
   });
