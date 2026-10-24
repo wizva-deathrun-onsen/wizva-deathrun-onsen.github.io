@@ -1,4 +1,4 @@
-# WizVA 送死流對話選項紀錄 / WizVA Death-Run Onsen Dialogue Guide
+# WizVD 送死流對話選項紀錄 / WizVD Death-Run Onsen Dialogue Guide
 
 《辟邪除妖 Variants Daphne》（ウィザードリィ ヴァリアンツ ダフネ）送死流泡泉水的固定對話正確選項，以及遣散有緣人後的緣份整理。
 
