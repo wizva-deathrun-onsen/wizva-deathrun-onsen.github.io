@@ -47,13 +47,13 @@ export function defaultState() {
 }
 
 /**
- * 重設篩選條件（性格／屬性／緣份、搜尋、僅顯示已有資料），保留排序與語言。
- * 排序是顯示偏好而不是篩選條件，所以「重設篩選」不應該動到它。
+ * 重設篩選條件（緣份／性格／屬性、搜尋），保留排序、「僅顯示已有資料」與語言。
+ * 後三者是顯示偏好而不是篩選條件，所以「重設篩選」不應該動到它們。
  * @param {FilterState} state
  * @returns {FilterState} 新的狀態物件
  */
 export function resetFilters(state) {
-  return { ...defaultState(), sort: state.sort, lang: state.lang };
+  return { ...defaultState(), sort: state.sort, known: state.known, lang: state.lang };
 }
 
 /**

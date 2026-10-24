@@ -124,14 +124,14 @@ describe('hasDialogue', () => {
 });
 
 describe('resetFilters', () => {
-  test('清除篩選條件但保留排序與語言', () => {
+  test('清除篩選條件但保留排序、僅顯示已有資料與語言', () => {
     const s = parseQuery('?align=good&elem=fire&bond=str&q=丹&show=all&sort=bond&lang=ja');
     const r = resetFilters(s);
     assert.equal(r.align.size, 0);
     assert.equal(r.elem.size, 0);
     assert.equal(r.bond.size, 0);
     assert.equal(r.q, '');
-    assert.equal(r.known, true);
+    assert.equal(r.known, false);
     assert.equal(r.sort, 'bond');
     assert.equal(r.lang, 'ja');
     assert.notEqual(r, s);
