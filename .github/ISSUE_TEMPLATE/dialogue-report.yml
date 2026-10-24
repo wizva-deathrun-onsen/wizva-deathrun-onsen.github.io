@@ -89,7 +89,6 @@ body:
         - 信
         - 命
         - 靈
-        - 不確定
     validations:
       required: false
 
