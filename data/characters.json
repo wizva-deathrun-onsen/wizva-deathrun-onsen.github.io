@@ -328,7 +328,7 @@
     "dialogue": {
       "option": 2,
       "answer": {
-        "zh": "（錢只是救人的手段）",
+        "zh": "盡其所能救人",
         "ja": null
       }
     },
@@ -336,7 +336,7 @@
     "contributors": [
       "Nightingale"
     ],
-    "verified": false
+    "verified": true
   },
   {
     "id": "adam",
@@ -1290,7 +1290,7 @@
     "dialogue": {
       "option": 1,
       "answer": {
-        "zh": null,
+        "zh": "偉大的冒險之歌",
         "ja": null
       }
     },
@@ -1338,7 +1338,7 @@
     "dialogue": {
       "option": 2,
       "answer": {
-        "zh": "（淺淺一抹微笑）",
+        "zh": "死亡也是冒險的一部分",
         "ja": null
       }
     },
@@ -1346,7 +1346,7 @@
     "contributors": [
       "Altair"
     ],
-    "verified": false
+    "verified": true
   },
   {
     "id": "gerard",
@@ -1516,14 +1516,16 @@
     "element": "wind",
     "rarity": "legendary",
     "dialogue": {
-      "option": null,
+      "option": 3,
       "answer": {
-        "zh": null,
+        "zh": "不如去獵自己的頭",
         "ja": null
       }
     },
     "bond": null,
-    "contributors": [],
+    "contributors": [
+      "煞氣A屁孩"
+    ],
     "verified": true
   },
   {
