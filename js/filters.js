@@ -13,7 +13,7 @@ export const ELEMENTS = ['light', 'dark', 'water', 'fire', 'wind', 'earth', 'non
 export const BONDS = ['str', 'int', 'agi', 'fai', 'luk', 'spi'];
 
 /** 可用的排序鍵。 */
-export const SORT_KEYS = ['default', 'name', 'bond'];
+export const SORT_KEYS = ['default', 'no', 'name', 'bond'];
 
 /** 支援的語言。 */
 export const LANGS = ['zh', 'ja'];
@@ -121,7 +121,7 @@ function normalize(s) {
 }
 
 /**
- * 判斷角色是否符合搜尋關鍵字。比對中日文名稱與中日文選項內容，不分大小寫與全半形。
+ * 判斷角色是否符合搜尋關鍵字。比對編號、中日文名稱與中日文選項內容，不分大小寫與全半形。
  * @param {Object} character characters.json 中的一筆資料
  * @param {string} q
  * @returns {boolean}
@@ -130,6 +130,7 @@ export function matchesQuery(character, q) {
   const needle = normalize(q.trim());
   if (!needle) return true;
   const haystack = [
+    character.no == null ? null : String(character.no),
     character.name?.zh,
     character.name?.ja,
     character.dialogue?.answer?.zh,
@@ -181,6 +182,7 @@ function byOrder(order) {
 /**
  * 排序角色清單，回傳新陣列。同值時保持原本資料順序（Array.prototype.sort 為 stable）。
  * - default：依性格（善→中立→惡→未標註）
+ * - no：依角色編號，未知排最後
  * - name：依目前語言的名稱，locale-aware
  * - bond：依緣份 力→靈，未知排最後
  * @param {Object[]} characters
@@ -195,6 +197,10 @@ export function sortCharacters(characters, key, lang) {
       const collator = new Intl.Collator(lang === 'ja' ? 'ja' : 'zh-Hant-TW');
       const name = (c) => localized(c.name, lang).text ?? '';
       return list.sort((a, b) => collator.compare(name(a), name(b)));
+    }
+    case 'no': {
+      const no = (c) => c.no ?? Infinity;
+      return list.sort((a, b) => no(a) - no(b));
     }
     case 'bond':
       return list.sort((a, b) => byOrder(BONDS)(a.bond, b.bond));

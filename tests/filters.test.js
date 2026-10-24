@@ -114,6 +114,11 @@ describe('matchesQuery', () => {
     assert.ok(!matchesQuery(daniel, '亞當'));
   });
 
+  test('比對編號', () => {
+    assert.ok(matchesQuery(make('d', { no: 2016 }), '2016'));
+    assert.ok(!matchesQuery(make('d', { no: null }), '2016'));
+  });
+
   test('空白關鍵字視為全部符合', () => {
     assert.ok(matchesQuery(daniel, '   '));
   });
@@ -170,6 +175,11 @@ describe('sortCharacters', () => {
       ['daniel', 'philip', 'adam', 'savia', 'alex']);
   });
 
+
+  test('no 依編號排序，未知排最後', () => {
+    const list = [make('x'), make('b', { no: 2016 }), make('a', { no: 68 })];
+    assert.deepEqual(sortCharacters(list, 'no', 'zh').map((c) => c.id), ['a', 'b', 'x']);
+  });
 
   test('bond 依力→靈排序，未知排最後', () => {
     assert.deepEqual(sortCharacters([savia, philip, adam, daniel], 'bond', 'zh').map((c) => c.id),
@@ -249,6 +259,7 @@ describe('data/characters.json', () => {
       assert.ok(c.rarity === null || ['nameless', 'named', 'legendary'].includes(c.rarity), c.id);
       assert.ok(c.dialogue.option === null || [1, 2, 3].includes(c.dialogue.option), c.id);
       assert.ok(c.name.zh || c.name.ja, `${c.id} 至少需要一種語言的名稱`);
+      assert.ok(c.no === null || Number.isInteger(c.no), `${c.id} 編號需為整數或 null`);
       assert.equal(typeof c.verified, 'boolean', c.id);
     }
   });

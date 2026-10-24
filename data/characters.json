@@ -1,6 +1,7 @@
 [
   {
     "id": "daniel",
+    "no": 2016,
     "name": {
       "zh": "丹尼爾",
       "ja": "ダニエル"
@@ -22,14 +23,15 @@
   },
   {
     "id": "eckart",
+    "no": 2039,
     "name": {
       "zh": "埃卡特",
-      "ja": null
+      "ja": "エッカルト"
     },
     "avatar": null,
     "alignment": "good",
-    "element": null,
-    "rarity": null,
+    "element": "fire",
+    "rarity": "named",
     "dialogue": {
       "option": 3,
       "answer": {
@@ -43,14 +45,15 @@
   },
   {
     "id": "asha",
+    "no": 2023,
     "name": {
       "zh": "亞莎",
-      "ja": null
+      "ja": "アーシャ"
     },
     "avatar": null,
     "alignment": "good",
-    "element": null,
-    "rarity": null,
+    "element": "fire",
+    "rarity": "named",
     "dialogue": {
       "option": 2,
       "answer": {
@@ -64,14 +67,15 @@
   },
   {
     "id": "chloe",
+    "no": 2040,
     "name": {
       "zh": "克洛艾",
-      "ja": null
+      "ja": "クロエ"
     },
     "avatar": null,
     "alignment": "good",
-    "element": null,
-    "rarity": null,
+    "element": "fire",
+    "rarity": "named",
     "dialogue": {
       "option": 2,
       "answer": {
@@ -85,14 +89,15 @@
   },
   {
     "id": "valdor",
+    "no": 2038,
     "name": {
       "zh": "瓦爾多爾",
-      "ja": null
+      "ja": "ヴァルドル"
     },
     "avatar": null,
     "alignment": "good",
-    "element": null,
-    "rarity": null,
+    "element": "light",
+    "rarity": "named",
     "dialogue": {
       "option": null,
       "answer": {
@@ -105,15 +110,16 @@
     "verified": true
   },
   {
-    "id": "lanavier",
+    "id": "lanavaille",
+    "no": 2004,
     "name": {
       "zh": "拉納維爾",
-      "ja": null
+      "ja": "ラナヴィーユ"
     },
     "avatar": null,
     "alignment": "good",
-    "element": null,
-    "rarity": null,
+    "element": "fire",
+    "rarity": "legendary",
     "dialogue": {
       "option": 3,
       "answer": {
@@ -127,14 +133,15 @@
   },
   {
     "id": "bugen",
+    "no": 2052,
     "name": {
       "zh": "武源",
-      "ja": null
+      "ja": "ブゲン"
     },
     "avatar": null,
     "alignment": "good",
-    "element": null,
-    "rarity": null,
+    "element": "earth",
+    "rarity": "named",
     "dialogue": {
       "option": 3,
       "answer": {
@@ -147,15 +154,16 @@
     "verified": true
   },
   {
-    "id": "bekanan",
+    "id": "berkanan",
+    "no": 68,
     "name": {
       "zh": "貝卡南",
-      "ja": null
+      "ja": "ベルカナン"
     },
     "avatar": null,
     "alignment": "good",
-    "element": null,
-    "rarity": null,
+    "element": "fire",
+    "rarity": "legendary",
     "dialogue": {
       "option": 1,
       "answer": {
@@ -168,15 +176,16 @@
     "verified": true
   },
   {
-    "id": "rivanna",
+    "id": "livana",
+    "no": 2050,
     "name": {
       "zh": "莉瓦娜",
-      "ja": null
+      "ja": "リヴァナ"
     },
     "avatar": null,
     "alignment": "good",
-    "element": null,
-    "rarity": null,
+    "element": "water",
+    "rarity": "legendary",
     "dialogue": {
       "option": 2,
       "answer": {
@@ -190,14 +199,15 @@
   },
   {
     "id": "eulalia",
+    "no": 2035,
     "name": {
       "zh": "歐拉莉亞",
-      "ja": null
+      "ja": "エウラリア"
     },
     "avatar": null,
     "alignment": "good",
-    "element": null,
-    "rarity": null,
+    "element": "water",
+    "rarity": "named",
     "dialogue": {
       "option": 2,
       "answer": {
@@ -210,15 +220,16 @@
     "verified": true
   },
   {
-    "id": "abenis",
+    "id": "abenius",
+    "no": 2008,
     "name": {
       "zh": "雅蓓妮絲",
-      "ja": null
+      "ja": "アベニウス"
     },
     "avatar": null,
     "alignment": "good",
-    "element": null,
-    "rarity": null,
+    "element": "light",
+    "rarity": "legendary",
     "dialogue": {
       "option": null,
       "answer": {
@@ -232,14 +243,15 @@
   },
   {
     "id": "camille",
+    "no": 2066,
     "name": {
       "zh": "卡米爾",
-      "ja": null
+      "ja": "カミール"
     },
     "avatar": null,
     "alignment": "good",
-    "element": null,
-    "rarity": null,
+    "element": "fire",
+    "rarity": "named",
     "dialogue": {
       "option": 1,
       "answer": {
@@ -253,14 +265,15 @@
   },
   {
     "id": "anemone",
+    "no": 2065,
     "name": {
-      "zh": null,
+      "zh": "銀蓮",
       "ja": "アネモネ"
     },
     "avatar": null,
     "alignment": "good",
-    "element": null,
-    "rarity": null,
+    "element": "light",
+    "rarity": "legendary",
     "dialogue": {
       "option": 1,
       "answer": {
@@ -270,18 +283,19 @@
     },
     "bond": null,
     "contributor": "",
-    "verified": false
+    "verified": true
   },
   {
-    "id": "marianna",
+    "id": "marianne",
+    "no": 2022,
     "name": {
       "zh": "瑪麗安娜",
-      "ja": null
+      "ja": "マリアンヌ"
     },
     "avatar": null,
     "alignment": "good",
-    "element": null,
-    "rarity": null,
+    "element": "wind",
+    "rarity": "named",
     "dialogue": {
       "option": 2,
       "answer": {
@@ -295,9 +309,10 @@
   },
   {
     "id": "adam",
+    "no": 2001,
     "name": {
       "zh": "亞當",
-      "ja": null
+      "ja": "アダム"
     },
     "avatar": null,
     "alignment": "evil",
@@ -315,15 +330,16 @@
     "verified": true
   },
   {
-    "id": "zeruf",
+    "id": "gerulf",
+    "no": 2002,
     "name": {
       "zh": "哲魯夫",
-      "ja": null
+      "ja": "ゲルルフ"
     },
     "avatar": null,
     "alignment": "evil",
-    "element": null,
-    "rarity": null,
+    "element": "fire",
+    "rarity": "legendary",
     "dialogue": {
       "option": 2,
       "answer": {
@@ -336,15 +352,16 @@
     "verified": false
   },
   {
-    "id": "charlilinia",
+    "id": "shelirionach",
+    "no": 2049,
     "name": {
       "zh": "夏莉莉妮雅",
-      "ja": null
+      "ja": "シェリリーニャ"
     },
     "avatar": null,
     "alignment": "evil",
-    "element": null,
-    "rarity": null,
+    "element": "dark",
+    "rarity": "legendary",
     "dialogue": {
       "option": 3,
       "answer": {
@@ -357,15 +374,16 @@
     "verified": true
   },
   {
-    "id": "seppa",
+    "id": "kiriha",
+    "no": 2019,
     "name": {
       "zh": "切羽",
-      "ja": null
+      "ja": "キリハ"
     },
     "avatar": null,
     "alignment": "evil",
-    "element": null,
-    "rarity": null,
+    "element": "dark",
+    "rarity": "named",
     "dialogue": {
       "option": 3,
       "answer": {
@@ -379,14 +397,15 @@
   },
   {
     "id": "amelia",
+    "no": 2041,
     "name": {
       "zh": "阿米莉婭",
-      "ja": null
+      "ja": "アメリア"
     },
     "avatar": null,
     "alignment": "evil",
-    "element": null,
-    "rarity": null,
+    "element": "fire",
+    "rarity": "named",
     "dialogue": {
       "option": null,
       "answer": {
@@ -400,9 +419,10 @@
   },
   {
     "id": "alice",
+    "no": 2005,
     "name": {
       "zh": "愛麗絲",
-      "ja": null
+      "ja": "アリス"
     },
     "avatar": null,
     "alignment": "evil",
@@ -420,15 +440,16 @@
     "verified": true
   },
   {
-    "id": "gandalf",
+    "id": "gandolfo",
+    "no": 2014,
     "name": {
       "zh": "甘道夫",
-      "ja": null
+      "ja": "ガンドルフォ"
     },
     "avatar": null,
     "alignment": "evil",
-    "element": null,
-    "rarity": null,
+    "element": "dark",
+    "rarity": "named",
     "dialogue": {
       "option": 1,
       "answer": {
@@ -441,15 +462,16 @@
     "verified": true
   },
   {
-    "id": "bakshi",
+    "id": "bakesh",
+    "no": 2037,
     "name": {
       "zh": "巴克什",
-      "ja": null
+      "ja": "バケシュ"
     },
     "avatar": null,
     "alignment": "evil",
-    "element": null,
-    "rarity": null,
+    "element": "wind",
+    "rarity": "named",
     "dialogue": {
       "option": 2,
       "answer": {
@@ -463,14 +485,15 @@
   },
   {
     "id": "milana",
+    "no": 2032,
     "name": {
       "zh": "米拉娜",
-      "ja": null
+      "ja": "ミラナ"
     },
     "avatar": null,
     "alignment": "evil",
-    "element": null,
-    "rarity": null,
+    "element": "dark",
+    "rarity": "named",
     "dialogue": {
       "option": null,
       "answer": {
@@ -484,14 +507,15 @@
   },
   {
     "id": "galina",
+    "no": 2033,
     "name": {
       "zh": "嘉莉娜",
-      "ja": null
+      "ja": "ガリーナ"
     },
     "avatar": null,
     "alignment": "evil",
-    "element": null,
-    "rarity": null,
+    "element": "earth",
+    "rarity": "named",
     "dialogue": {
       "option": null,
       "answer": {
@@ -505,14 +529,15 @@
   },
   {
     "id": "viviana",
+    "no": 2021,
     "name": {
       "zh": "薇薇安娜",
-      "ja": null
+      "ja": "ビビアナ"
     },
     "avatar": null,
     "alignment": "evil",
-    "element": null,
-    "rarity": null,
+    "element": "water",
+    "rarity": "named",
     "dialogue": {
       "option": 2,
       "answer": {
@@ -525,15 +550,16 @@
     "verified": true
   },
   {
-    "id": "galbados",
+    "id": "galbadus",
+    "no": 2055,
     "name": {
       "zh": "迦魯巴多斯",
-      "ja": null
+      "ja": "ガルバドゥス"
     },
     "avatar": null,
     "alignment": "evil",
-    "element": null,
-    "rarity": null,
+    "element": "dark",
+    "rarity": "legendary",
     "dialogue": {
       "option": null,
       "answer": {
@@ -547,14 +573,15 @@
   },
   {
     "id": "rinne",
+    "no": 2010,
     "name": {
       "zh": "凜音",
-      "ja": null
+      "ja": "リンネ"
     },
     "avatar": null,
     "alignment": "evil",
-    "element": null,
-    "rarity": null,
+    "element": "dark",
+    "rarity": "legendary",
     "dialogue": {
       "option": 3,
       "answer": {
@@ -568,14 +595,15 @@
   },
   {
     "id": "elda",
+    "no": 2025,
     "name": {
       "zh": "埃爾達",
-      "ja": null
+      "ja": "エルダー"
     },
     "avatar": null,
     "alignment": "evil",
-    "element": null,
-    "rarity": null,
+    "element": "dark",
+    "rarity": "named",
     "dialogue": {
       "option": null,
       "answer": {
@@ -588,15 +616,16 @@
     "verified": true
   },
   {
-    "id": "yunajinki",
+    "id": "yuzunamiki",
+    "no": 2057,
     "name": {
       "zh": "柚奈壬姬",
-      "ja": null
+      "ja": "ユズナミキ"
     },
     "avatar": null,
     "alignment": "evil",
-    "element": null,
-    "rarity": null,
+    "element": "earth",
+    "rarity": "legendary",
     "dialogue": {
       "option": null,
       "answer": {
@@ -610,14 +639,15 @@
   },
   {
     "id": "savia",
+    "no": 2011,
     "name": {
       "zh": "薩維亞",
-      "ja": null
+      "ja": "サヴィア"
     },
     "avatar": null,
     "alignment": "evil",
-    "element": null,
-    "rarity": null,
+    "element": "dark",
+    "rarity": "legendary",
     "dialogue": {
       "option": 1,
       "answer": {
@@ -631,14 +661,15 @@
   },
   {
     "id": "raffaello",
+    "no": 2056,
     "name": {
       "zh": "拉斐洛",
-      "ja": null
+      "ja": "ラファエロ"
     },
     "avatar": null,
     "alignment": "evil",
-    "element": null,
-    "rarity": null,
+    "element": "fire",
+    "rarity": "legendary",
     "dialogue": {
       "option": 2,
       "answer": {
@@ -651,15 +682,16 @@
     "verified": true
   },
   {
-    "id": "yemil",
+    "id": "jarmil",
+    "no": 2017,
     "name": {
       "zh": "耶米勒",
-      "ja": null
+      "ja": "ヤルミル"
     },
     "avatar": null,
     "alignment": "evil",
-    "element": null,
-    "rarity": null,
+    "element": "wind",
+    "rarity": "named",
     "dialogue": {
       "option": 3,
       "answer": {
@@ -672,15 +704,16 @@
     "verified": true
   },
   {
-    "id": "felicia",
+    "id": "phyllisia",
+    "no": 2068,
     "name": {
       "zh": "菲莉西雅",
-      "ja": null
+      "ja": "フィリシア"
     },
     "avatar": null,
     "alignment": "evil",
-    "element": null,
-    "rarity": null,
+    "element": "dark",
+    "rarity": "legendary",
     "dialogue": {
       "option": 1,
       "answer": {
@@ -694,9 +727,10 @@
   },
   {
     "id": "philip",
+    "no": 2026,
     "name": {
       "zh": "菲利普",
-      "ja": null
+      "ja": "フィリプ"
     },
     "avatar": null,
     "alignment": "neutral",
@@ -715,14 +749,15 @@
   },
   {
     "id": "yekaterina",
+    "no": 2003,
     "name": {
       "zh": "葉卡捷琳娜",
-      "ja": null
+      "ja": "エカテリーナ"
     },
     "avatar": null,
     "alignment": "neutral",
-    "element": null,
-    "rarity": null,
+    "element": "earth",
+    "rarity": "legendary",
     "dialogue": {
       "option": 1,
       "answer": {
@@ -736,14 +771,15 @@
   },
   {
     "id": "shiou",
+    "no": 2053,
     "name": {
       "zh": "獅櫻",
-      "ja": null
+      "ja": "シオウ"
     },
     "avatar": null,
     "alignment": "neutral",
-    "element": null,
-    "rarity": null,
+    "element": "wind",
+    "rarity": "legendary",
     "dialogue": {
       "option": 2,
       "answer": {
@@ -757,14 +793,15 @@
   },
   {
     "id": "jean",
+    "no": 2015,
     "name": {
       "zh": "讓",
-      "ja": null
+      "ja": "ジャン"
     },
     "avatar": null,
     "alignment": "neutral",
-    "element": null,
-    "rarity": null,
+    "element": "earth",
+    "rarity": "named",
     "dialogue": {
       "option": null,
       "answer": {
@@ -778,14 +815,15 @@
   },
   {
     "id": "barbara",
+    "no": 2042,
     "name": {
       "zh": "芭芭拉",
-      "ja": null
+      "ja": "バルバラ"
     },
     "avatar": null,
     "alignment": "neutral",
-    "element": null,
-    "rarity": null,
+    "element": "wind",
+    "rarity": "named",
     "dialogue": {
       "option": null,
       "answer": {
@@ -799,14 +837,15 @@
   },
   {
     "id": "elise",
+    "no": 2031,
     "name": {
       "zh": "艾莉賽",
-      "ja": null
+      "ja": "エリゼ"
     },
     "avatar": null,
     "alignment": "neutral",
-    "element": null,
-    "rarity": null,
+    "element": "earth",
+    "rarity": "named",
     "dialogue": {
       "option": null,
       "answer": {
@@ -819,15 +858,16 @@
     "verified": true
   },
   {
-    "id": "furt",
+    "id": "flut",
+    "no": 2034,
     "name": {
       "zh": "芙爾特",
-      "ja": null
+      "ja": "フルート"
     },
     "avatar": null,
     "alignment": "neutral",
-    "element": null,
-    "rarity": null,
+    "element": "water",
+    "rarity": "named",
     "dialogue": {
       "option": null,
       "answer": {
@@ -841,14 +881,15 @@
   },
   {
     "id": "olive",
+    "no": 2030,
     "name": {
       "zh": "奧利芙",
-      "ja": null
+      "ja": "オリーブ"
     },
     "avatar": null,
     "alignment": "neutral",
-    "element": null,
-    "rarity": null,
+    "element": "wind",
+    "rarity": "named",
     "dialogue": {
       "option": null,
       "answer": {
@@ -862,14 +903,15 @@
   },
   {
     "id": "ophelia",
+    "no": 2020,
     "name": {
       "zh": "奧菲麗雅",
-      "ja": null
+      "ja": "オフェーリア"
     },
     "avatar": null,
     "alignment": "neutral",
-    "element": null,
-    "rarity": null,
+    "element": "wind",
+    "rarity": "named",
     "dialogue": {
       "option": null,
       "answer": {
@@ -883,14 +925,15 @@
   },
   {
     "id": "clarissa",
+    "no": 2024,
     "name": {
       "zh": "克拉麗莎",
-      "ja": null
+      "ja": "クラリーサ"
     },
     "avatar": null,
     "alignment": "neutral",
-    "element": null,
-    "rarity": null,
+    "element": "light",
+    "rarity": "named",
     "dialogue": {
       "option": 3,
       "answer": {
@@ -904,14 +947,15 @@
   },
   {
     "id": "aldric",
+    "no": 2051,
     "name": {
       "zh": "奧爾德里克",
-      "ja": null
+      "ja": "オルドリック"
     },
     "avatar": null,
     "alignment": "neutral",
-    "element": null,
-    "rarity": null,
+    "element": "wind",
+    "rarity": "legendary",
     "dialogue": {
       "option": 1,
       "answer": {
@@ -925,14 +969,15 @@
   },
   {
     "id": "dino",
+    "no": 2028,
     "name": {
       "zh": "迪諾",
-      "ja": null
+      "ja": "ディノ"
     },
     "avatar": null,
     "alignment": "neutral",
-    "element": null,
-    "rarity": null,
+    "element": "wind",
+    "rarity": "named",
     "dialogue": {
       "option": 3,
       "answer": {
@@ -945,15 +990,16 @@
     "verified": true
   },
   {
-    "id": "albaris",
+    "id": "arboris",
+    "no": 2012,
     "name": {
       "zh": "阿爾伯里斯",
-      "ja": null
+      "ja": "アルボリス"
     },
     "avatar": null,
     "alignment": "neutral",
-    "element": null,
-    "rarity": null,
+    "element": "earth",
+    "rarity": "legendary",
     "dialogue": {
       "option": 1,
       "answer": {
@@ -967,14 +1013,15 @@
   },
   {
     "id": "benjamin",
+    "no": 2036,
     "name": {
       "zh": "本傑明",
-      "ja": null
+      "ja": "ベンジャミン"
     },
     "avatar": null,
     "alignment": "neutral",
-    "element": null,
-    "rarity": null,
+    "element": "earth",
+    "rarity": "named",
     "dialogue": {
       "option": 1,
       "answer": {
@@ -987,10 +1034,11 @@
     "verified": true
   },
   {
-    "id": "deborah",
+    "id": "debra",
+    "no": 2006,
     "name": {
       "zh": "黛波拉",
-      "ja": null
+      "ja": "デボラ"
     },
     "avatar": null,
     "alignment": "neutral",
@@ -1008,15 +1056,16 @@
     "verified": true
   },
   {
-    "id": "plish",
+    "id": "prishe",
+    "no": 9006,
     "name": {
       "zh": "普利修",
-      "ja": null
+      "ja": "プリッシュ"
     },
     "avatar": null,
     "alignment": "neutral",
-    "element": null,
-    "rarity": null,
+    "element": "light",
+    "rarity": "legendary",
     "dialogue": {
       "option": 3,
       "answer": {
@@ -1030,14 +1079,15 @@
   },
   {
     "id": "heinrico",
+    "no": 2060,
     "name": {
       "zh": "海因里科",
-      "ja": null
+      "ja": "ハインリコ"
     },
     "avatar": null,
     "alignment": "neutral",
-    "element": null,
-    "rarity": null,
+    "element": "earth",
+    "rarity": "named",
     "dialogue": {
       "option": 2,
       "answer": {
@@ -1051,14 +1101,15 @@
   },
   {
     "id": "eldorado",
+    "no": 2029,
     "name": {
       "zh": "埃爾多拉多",
-      "ja": null
+      "ja": "エルドラド"
     },
     "avatar": null,
-    "alignment": null,
-    "element": null,
-    "rarity": null,
+    "alignment": "good",
+    "element": "dark",
+    "rarity": "named",
     "dialogue": {
       "option": null,
       "answer": {
@@ -1068,18 +1119,19 @@
     },
     "bond": null,
     "contributor": "",
-    "verified": false
+    "verified": true
   },
   {
     "id": "alex",
+    "no": 2018,
     "name": {
       "zh": "亞曆克斯",
-      "ja": null
+      "ja": "アレックス"
     },
     "avatar": null,
-    "alignment": null,
-    "element": null,
-    "rarity": null,
+    "alignment": "good",
+    "element": "fire",
+    "rarity": "named",
     "dialogue": {
       "option": 1,
       "answer": {
@@ -1089,18 +1141,19 @@
     },
     "bond": null,
     "contributor": "",
-    "verified": false
+    "verified": true
   },
   {
     "id": "emil",
+    "no": 2027,
     "name": {
       "zh": "埃米爾",
-      "ja": null
+      "ja": "エーミル"
     },
     "avatar": null,
-    "alignment": null,
-    "element": null,
-    "rarity": null,
+    "alignment": "good",
+    "element": "light",
+    "rarity": "named",
     "dialogue": {
       "option": 3,
       "answer": {
@@ -1110,18 +1163,19 @@
     },
     "bond": null,
     "contributor": "",
-    "verified": false
+    "verified": true
   },
   {
-    "id": "linalia",
+    "id": "linaria",
+    "no": 2064,
     "name": {
       "zh": "莉娜莉婭",
-      "ja": null
+      "ja": "リナリア"
     },
     "avatar": null,
-    "alignment": null,
-    "element": null,
-    "rarity": null,
+    "alignment": "evil",
+    "element": "dark",
+    "rarity": "legendary",
     "dialogue": {
       "option": 1,
       "answer": {
@@ -1131,18 +1185,19 @@
     },
     "bond": null,
     "contributor": "",
-    "verified": false
+    "verified": true
   },
   {
-    "id": "enikki",
+    "id": "ainikki",
+    "no": 69,
     "name": {
       "zh": "艾妮琪",
-      "ja": null
+      "ja": "アイニッキ"
     },
     "avatar": null,
-    "alignment": null,
-    "element": null,
-    "rarity": null,
+    "alignment": "good",
+    "element": "fire",
+    "rarity": "legendary",
     "dialogue": {
       "option": 2,
       "answer": {
@@ -1152,18 +1207,19 @@
     },
     "bond": null,
     "contributor": "",
-    "verified": false
+    "verified": true
   },
   {
-    "id": "iamas",
+    "id": "iarumas",
+    "no": 67,
     "name": {
       "zh": "伊亞瑪斯",
-      "ja": null
+      "ja": "イアルマス"
     },
     "avatar": null,
-    "alignment": null,
-    "element": null,
-    "rarity": null,
+    "alignment": "neutral",
+    "element": "none",
+    "rarity": "legendary",
     "dialogue": {
       "option": 2,
       "answer": {
@@ -1174,5 +1230,225 @@
     "bond": null,
     "contributor": "",
     "verified": false
+  },
+  {
+    "id": "gerard",
+    "no": 2007,
+    "name": {
+      "zh": "吉拉德",
+      "ja": "ジラルド"
+    },
+    "avatar": null,
+    "alignment": "good",
+    "element": "dark",
+    "rarity": "legendary",
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": null,
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "red-beard",
+    "no": 2009,
+    "name": {
+      "zh": "紅鬍子",
+      "ja": "赤ひげ"
+    },
+    "avatar": null,
+    "alignment": "neutral",
+    "element": "dark",
+    "rarity": "legendary",
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": null,
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "gaston",
+    "no": 2013,
+    "name": {
+      "zh": "加斯頓",
+      "ja": "ガストン"
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": "earth",
+    "rarity": "named",
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": null,
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "gillion",
+    "no": 2058,
+    "name": {
+      "zh": "基利昂",
+      "ja": "ギリオン"
+    },
+    "avatar": null,
+    "alignment": "neutral",
+    "element": "dark",
+    "rarity": "legendary",
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": null,
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "erwin",
+    "no": 2059,
+    "name": {
+      "zh": "艾爾文",
+      "ja": "エルヴィン"
+    },
+    "avatar": null,
+    "alignment": "neutral",
+    "element": "fire",
+    "rarity": "legendary",
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": null,
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "yrsa",
+    "no": 2061,
+    "name": {
+      "zh": "尤爾薩",
+      "ja": "ユルサ"
+    },
+    "avatar": null,
+    "alignment": "good",
+    "element": "water",
+    "rarity": "legendary",
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": null,
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "yoizou",
+    "no": 2062,
+    "name": {
+      "zh": "宵藏",
+      "ja": "ヨイゾウ"
+    },
+    "avatar": null,
+    "alignment": "good",
+    "element": "fire",
+    "rarity": "legendary",
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": null,
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "kagero",
+    "no": 2067,
+    "name": {
+      "zh": "影狼",
+      "ja": "カゲロウ"
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": "wind",
+    "rarity": "legendary",
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": null,
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "zeid",
+    "no": 9004,
+    "name": {
+      "zh": "賽德",
+      "ja": "ザイド"
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": "dark",
+    "rarity": "legendary",
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": null,
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "iroha",
+    "no": 9005,
+    "name": {
+      "zh": "五郎八",
+      "ja": "イロハ"
+    },
+    "avatar": null,
+    "alignment": "good",
+    "element": "fire",
+    "rarity": "legendary",
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": null,
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
   }
 ]

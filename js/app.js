@@ -189,6 +189,9 @@ function renderRow(c) {
   report.setAttribute('aria-label', `${strings.ui.report}：${name.text ?? titleName}`);
 
   const tr = el('tr', {},
+    cell('colNo', c.no == null
+      ? el('span', { className: 'missing', textContent: strings.ui.unknown })
+      : el('span', { className: 'no', textContent: `No.${c.no}` })),
     cell('colAvatar', avatar(c, name.text)),
     nameCell,
     cell('colAlignment', badge('alignment', c.alignment)),
@@ -255,7 +258,7 @@ async function main() {
   } catch (err) {
     console.error(err);
     // i18n.json 本身可能就是載入失敗的那個檔案，所以這裡只能寫死文字。
-    $('#rows').replaceChildren(el('tr', {}, el('td', { colSpan: 9, className: 'error', textContent: '資料載入失敗，請重新整理頁面' })));
+    $('#rows').replaceChildren(el('tr', {}, el('td', { colSpan: 10, className: 'error', textContent: '資料載入失敗，請重新整理頁面' })));
     return;
   }
 

@@ -32,6 +32,7 @@ npm test        # node:test 單元測試（Node 22+）
 ```json
 {
   "id": "daniel",
+  "no": 2016,
   "name": { "zh": "丹尼爾", "ja": "ダニエル" },
   "avatar": "assets/avatars/daniel.webp",
   "alignment": "good",
@@ -46,6 +47,8 @@ npm test        # node:test 單元測試（Node 22+）
 
 | 欄位 | 值 |
 | --- | --- |
+| `id` | 與 leveling-guide 的角色 key 相同（特殊造型去掉 `-數字` 後綴），頭像檔名也用它 |
+| `no` | 遊戲內角色編號；特殊造型與原版共用同一個編號 |
 | `alignment` | `good` / `neutral` / `evil` / `null` |
 | `element` | `light` / `dark` / `water` / `fire` / `wind` / `earth` / `none` / `null` |
 | `rarity` | `nameless` / `named` / `legendary` / `null` |
@@ -53,6 +56,7 @@ npm test        # node:test 單元測試（Node 22+）
 | `bond` | `str` 力 / `int` 智 / `agi` 敏 / `fai` 信 / `luk` 命 / `spi` 靈 / `null` |
 | `verified` | `false` 時顯示「待確認」標記 |
 
+- 同一角色的特殊造型只收一筆，頭像使用原始造型
 - 未知欄位一律填 `null`，頁面顯示「?」或「—」
 - `avatar` 為相對路徑；沒有頭像時填 `null`，頁面顯示名稱首字
 - `contributor` 多人用逗號或頓號分隔
