@@ -47,6 +47,16 @@ export function defaultState() {
 }
 
 /**
+ * 重設篩選條件（性格／屬性／緣份、搜尋、僅顯示已有資料），保留排序與語言。
+ * 排序是顯示偏好而不是篩選條件，所以「重設篩選」不應該動到它。
+ * @param {FilterState} state
+ * @returns {FilterState} 新的狀態物件
+ */
+export function resetFilters(state) {
+  return { ...defaultState(), sort: state.sort, lang: state.lang };
+}
+
+/**
  * 解析逗號分隔的清單參數，只保留合法值。
  * 參數不存在或為空字串時回傳空集合（不篩選）。
  * @param {URLSearchParams} params

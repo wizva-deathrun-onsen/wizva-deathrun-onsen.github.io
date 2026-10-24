@@ -6,7 +6,7 @@
 import { REPO_URL, ISSUE_TEMPLATE, SOURCES } from './config.js';
 import {
   ALIGNMENTS, ELEMENTS, BONDS,
-  defaultState, parseQuery, serializeQuery,
+  resetFilters, parseQuery, serializeQuery,
   filterCharacters, sortCharacters, localized,
   buildIssueUrl, hasDialogue,
 } from './filters.js';
@@ -252,7 +252,7 @@ function bindEvents() {
     update();
   });
   $('#reset').addEventListener('click', () => {
-    state = defaultState();
+    state = resetFilters(state);
     syncControls();
     update();
   });

@@ -4,7 +4,7 @@ import { readFileSync, existsSync } from 'node:fs';
 
 import {
   ALIGNMENTS, ELEMENTS, BONDS,
-  defaultState, parseQuery, serializeQuery,
+  defaultState, resetFilters, parseQuery, serializeQuery,
   matchesQuery, filterCharacters, sortCharacters, hasDialogue,
   localized, buildIssueUrl,
 } from '../js/filters.js';
@@ -120,6 +120,21 @@ describe('hasDialogue', () => {
     assert.ok(hasDialogue(make('b', { dialogue: { option: null, answer: { zh: '名聲', ja: null } } })));
     assert.ok(hasDialogue(make('c', { dialogue: { option: null, answer: { zh: null, ja: '今を楽しめ' } } })));
     assert.ok(!hasDialogue(make('d')));
+  });
+});
+
+describe('resetFilters', () => {
+  test('清除篩選條件但保留排序與語言', () => {
+    const s = parseQuery('?align=good&elem=fire&bond=str&q=丹&show=all&sort=bond&lang=ja');
+    const r = resetFilters(s);
+    assert.equal(r.align.size, 0);
+    assert.equal(r.elem.size, 0);
+    assert.equal(r.bond.size, 0);
+    assert.equal(r.q, '');
+    assert.equal(r.known, true);
+    assert.equal(r.sort, 'bond');
+    assert.equal(r.lang, 'ja');
+    assert.notEqual(r, s);
   });
 });
 
