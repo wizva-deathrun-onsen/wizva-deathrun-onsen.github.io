@@ -197,7 +197,7 @@ function renderRow(c) {
     cell('colElement', badge('element', c.element)),
     cell('colRarity', badge('rarity', c.rarity)),
     cell('colOption', option
-      ? el('span', { className: 'option', textContent: String(option) })
+      ? el('span', { className: `option option-${option}`, textContent: String(option) })
       : el('span', { className: 'missing', textContent: strings.ui.unknown })),
     cell('colAnswer', localizedText(answer, strings.ui.unknown),
       ...(c.contributors?.length

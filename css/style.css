@@ -16,6 +16,10 @@
   --warn-bg: #fbecc9;
   --option-bg: #2f5d62;
   --option-text: #fff;
+  /* 選項 1／2／3 各自的底色：藍、橘、紫，色盲也較容易區分 */
+  --option-1: #2f6fb3;
+  --option-2: #c4620f;
+  --option-3: #7b4bb0;
 
   --good: #2d6a8f;
   --neutral: #6b6b6b;
@@ -49,6 +53,9 @@
   --warn-bg: #3a2f17;
   --option-bg: #7fb7bc;
   --option-text: #102022;
+  --option-1: #5b9ee6;
+  --option-2: #ef8c3a;
+  --option-3: #a97ee0;
 
   --good: #78b4dc;
   --neutral: #b4b4b4;
@@ -417,8 +424,37 @@ td.colNo { white-space: nowrap; }
   color: var(--option-text);
   font-weight: 700;
 }
+.option-1, .option-2, .option-3 { color: #fff; }
+.option-1 { background: var(--option-1); }
+.option-2 { background: var(--option-2); }
+.option-3 { background: var(--option-3); }
+:root[data-theme="dark"] .option-1,
+:root[data-theme="dark"] .option-2,
+:root[data-theme="dark"] .option-3 { color: #15181a; }
 
 .badge { font-weight: 600; white-space: nowrap; }
+
+/* 稀有度：傳說用金色漸層（遊戲「精選冒險者」風格），有名用深棕底（遊戲角色名牌風格） */
+.rarity-legendary,
+.rarity-named {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+.rarity-legendary {
+  background: linear-gradient(180deg, #fbe9a6 0%, #e2b54a 55%, #b9832a 100%);
+  color: #4a2f05;
+  border: 1px solid #a8741f;
+  box-shadow: 0 0 6px rgba(226, 181, 74, 0.45);
+  text-shadow: 0 1px 0 rgba(255, 244, 205, 0.6);
+}
+.rarity-named {
+  background: #3b2c27;
+  color: #efe6df;
+  border: 1px solid #5a463e;
+}
+.rarity-nameless { color: var(--muted); font-weight: 400; }
 .alignment-good { color: var(--good); }
 .alignment-neutral { color: var(--neutral); }
 .alignment-evil { color: var(--evil); }
