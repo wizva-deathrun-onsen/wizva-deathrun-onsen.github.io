@@ -77,10 +77,29 @@ npm test       # 會檢查版本號是否一致、import map 是否涵蓋 js/ �
 
 ## 處理社群回報
 
-1. 在 Issue 確認內容（有截圖優先採信）
-2. 更新 `data/characters.json`，把回報者加進 `contributors` 陣列
+回報一律先經過維護者人工審核，用 Issue 的 label 標示狀態：
+
+| Label | 意思 | 誰來設定 |
+| --- | --- | --- |
+| `待審核` | 新回報，還沒看過 | Issue 範本自動加上 |
+| `已確認` | 維護者看過，可以更新到網站 | 維護者手動加上（同時移除 `待審核`） |
+| `資料有誤` | 內容有問題，不採用 | 維護者手動加上並關閉 Issue |
+
+更新資料時只處理標了 `已確認` 的 Issue：
+
+1. 讀取回報內容，核對日文名、性格、屬性與 `characters.json` 是否一致（有截圖優先採信）
+2. 更新 `data/characters.json`，把回報者暱稱加進 `contributors` 陣列（備註欄的「回報者」）
 3. 執行 `npm test` 確認資料格式正確
 4. commit 訊息附上 `Closes #<issue 編號>`，push 後 Issue 會自動關閉
+
+Label 由 `.github/workflows/labels.yml` 建立；新增或改名 label 時改那個檔案即可。
+
+### 新回報的 Email 通知
+
+GitHub 本身就會寄信通知，不需要額外設定程式：
+
+1. 在 repo 頁面右上角按 **Watch → All Activity**
+2. 在 GitHub **Settings → Notifications** 確認 Email 通知已開啟；若通知信箱不是想要的那個，可在 **Custom routing** 把 `wizva-deathrun-onsen` 這個 organization 指定寄到該信箱
 
 ## 資料來源
 

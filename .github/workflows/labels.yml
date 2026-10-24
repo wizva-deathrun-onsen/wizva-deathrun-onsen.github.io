@@ -1,0 +1,26 @@
+# 建立／更新社群回報審核流程用的 label（見 .github/DEVELOPMENT.md「處理社群回報」）。
+# 只用 GitHub 內建的 gh CLI 與 GITHUB_TOKEN，不需要額外的 secret。
+name: Sync labels
+
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/labels.yml]
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create or update labels
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh label create "data-report" --color "0e8a16" --description "社群回報的對話資料" --force
+          gh label create "待審核" --color "fbca04" --description "新回報，等待維護者人工確認" --force
+          gh label create "已確認" --color "1d76db" --description "維護者已確認，可以更新到網站" --force
+          gh label create "資料有誤" --color "d93f0b" --description "內容有問題，不採用" --force
