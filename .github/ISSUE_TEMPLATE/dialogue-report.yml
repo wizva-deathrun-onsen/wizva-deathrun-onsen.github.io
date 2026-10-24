@@ -1,0 +1,108 @@
+name: 對話資料回報
+description: 回報新角色的送死流泉水對話，或修正既有資料
+title: "[資料回報] "
+labels: ["data-report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感謝回報！請只回報 **送死流**（隊伍有成員陣亡後泡泉水）觸發的固定對話，一般泉水的隨機對話不適用。
+        不確定的欄位可以留空或選「不確定」，維護者審核後會更新到網站並把你列為補充者。
+
+  - type: input
+    id: name_zh
+    attributes:
+      label: 角色名稱（中文）
+      description: 以遊戲繁中版譯名為準
+      placeholder: 丹尼爾
+    validations:
+      required: false
+
+  - type: input
+    id: name_ja
+    attributes:
+      label: 角色名稱（日文）
+      placeholder: ダニエル
+    validations:
+      required: false
+
+  - type: dropdown
+    id: alignment
+    attributes:
+      label: 性格
+      options:
+        - 善
+        - 中立
+        - 惡
+        - 不確定
+    validations:
+      required: true
+
+  - type: dropdown
+    id: element
+    attributes:
+      label: 屬性
+      options:
+        - 光
+        - 暗
+        - 水
+        - 火
+        - 風
+        - 土
+        - 無
+        - 不確定
+    validations:
+      required: false
+
+  - type: dropdown
+    id: option
+    attributes:
+      label: 正確選項
+      description: 由上往下數的第幾個選項
+      options:
+        - "1"
+        - "2"
+        - "3"
+        - 不確定
+    validations:
+      required: true
+
+  - type: input
+    id: answer
+    attributes:
+      label: 選項文字
+      description: 正確選項的文字；中文或日文皆可
+      placeholder: 得到上帝寬恕
+    validations:
+      required: false
+
+  - type: dropdown
+    id: bond
+    attributes:
+      label: 緣份（遣散後的能力加成）
+      options:
+        - 力
+        - 智
+        - 敏
+        - 信
+        - 命
+        - 靈
+        - 不確定
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: 截圖（選填）
+      description: 可直接把圖片拖曳到這裡
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 備註
+      description: 例如資料來源、是修正哪一筆資料、希望署名的名稱
+    validations:
+      required: false

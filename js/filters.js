@@ -1,0 +1,236 @@
+/**
+ * 篩選、排序、搜尋與 URL query 轉換。
+ * 本檔只放純函式（不碰 DOM、不讀寫 storage），以便用 node:test 單元測試。
+ */
+
+/** 性格的所有可能值，順序即預設排序與 UI 顯示順序。 */
+export const ALIGNMENTS = ['good', 'neutral', 'evil'];
+
+/** 屬性的所有可能值。 */
+export const ELEMENTS = ['light', 'dark', 'water', 'fire', 'wind', 'earth', 'none'];
+
+/** 緣份的所有可能值，順序即排序順序。 */
+export const BONDS = ['str', 'int', 'agi', 'fai', 'luk', 'spi'];
+
+/** 可用的排序鍵。 */
+export const SORT_KEYS = ['default', 'name', 'option', 'bond'];
+
+/** 支援的語言。 */
+export const LANGS = ['zh', 'ja'];
+
+/**
+ * 篩選狀態。
+ * @typedef {Object} FilterState
+ * @property {Set<string>} align 選取的性格
+ * @property {Set<string>} elem 選取的屬性
+ * @property {Set<string>} bond 選取的緣份
+ * @property {string} q 搜尋關鍵字
+ * @property {string} sort 排序鍵，見 SORT_KEYS
+ * @property {string|null} lang 語言；null 表示 URL 未指定
+ */
+
+/**
+ * 回傳預設（全選、不搜尋）的篩選狀態。
+ * @returns {FilterState}
+ */
+export function defaultState() {
+  return {
+    align: new Set(ALIGNMENTS),
+    elem: new Set(ELEMENTS),
+    bond: new Set(BONDS),
+    q: '',
+    sort: 'default',
+    lang: null,
+  };
+}
+
+/**
+ * 解析逗號分隔的清單參數，只保留合法值。
+ * 參數不存在時回傳全選；參數存在但為空字串時回傳空集合（使用者全部取消勾選）。
+ * @param {URLSearchParams} params
+ * @param {string} key
+ * @param {string[]} allowed
+ * @returns {Set<string>}
+ */
+function parseList(params, key, allowed) {
+  if (!params.has(key)) return new Set(allowed);
+  const values = params.get(key).split(',').map((v) => v.trim());
+  return new Set(values.filter((v) => allowed.includes(v)));
+}
+
+/**
+ * 將 URL query string 解析成篩選狀態，不合法的值會被忽略。
+ * @param {string} search 例如 `?align=good,evil&lang=ja`
+ * @returns {FilterState}
+ */
+export function parseQuery(search) {
+  const params = new URLSearchParams(search);
+  const sort = params.get('sort');
+  const lang = params.get('lang');
+  return {
+    align: parseList(params, 'align', ALIGNMENTS),
+    elem: parseList(params, 'elem', ELEMENTS),
+    bond: parseList(params, 'bond', BONDS),
+    q: (params.get('q') ?? '').trim(),
+    sort: SORT_KEYS.includes(sort) ? sort : 'default',
+    lang: LANGS.includes(lang) ? lang : null,
+  };
+}
+
+/**
+ * 將篩選狀態轉回 query string。與預設值相同的欄位會省略，讓分享網址保持精簡。
+ * 清單依常數順序輸出，確保同一狀態永遠得到同一字串。
+ * @param {FilterState} state
+ * @returns {string} 以 `?` 開頭；全為預設值時回傳空字串
+ */
+export function serializeQuery(state) {
+  const params = new URLSearchParams();
+  const lists = [['align', state.align, ALIGNMENTS], ['elem', state.elem, ELEMENTS], ['bond', state.bond, BONDS]];
+  for (const [key, set, allowed] of lists) {
+    if (set.size !== allowed.length) {
+      params.set(key, allowed.filter((v) => set.has(v)).join(','));
+    }
+  }
+  if (state.q) params.set('q', state.q);
+  if (state.sort && state.sort !== 'default') params.set('sort', state.sort);
+  if (state.lang) params.set('lang', state.lang);
+  const str = params.toString().replaceAll('%2C', ',');
+  return str ? `?${str}` : '';
+}
+
+/**
+ * 判斷某個維度是否通過篩選。
+ * 全選時不限制（未知值 null 也顯示）；只要有取消勾選，null 就視為不符合。
+ * @param {Set<string>} selected
+ * @param {string[]} allowed
+ * @param {string|null} value
+ * @returns {boolean}
+ */
+function matchesSet(selected, allowed, value) {
+  if (selected.size === allowed.length) return true;
+  return value != null && selected.has(value);
+}
+
+/**
+ * 正規化字串以做寬鬆比對：NFKC（全形半形統一）＋小寫。
+ * @param {string} s
+ * @returns {string}
+ */
+function normalize(s) {
+  return s.normalize('NFKC').toLowerCase();
+}
+
+/**
+ * 判斷角色是否符合搜尋關鍵字。比對中日文名稱與中日文選項內容，不分大小寫與全半形。
+ * @param {Object} character characters.json 中的一筆資料
+ * @param {string} q
+ * @returns {boolean}
+ */
+export function matchesQuery(character, q) {
+  const needle = normalize(q.trim());
+  if (!needle) return true;
+  const haystack = [
+    character.name?.zh,
+    character.name?.ja,
+    character.dialogue?.answer?.zh,
+    character.dialogue?.answer?.ja,
+  ];
+  return haystack.some((s) => s && normalize(s).includes(needle));
+}
+
+/**
+ * 依篩選狀態過濾角色清單，不改變原陣列與順序。
+ * @param {Object[]} characters
+ * @param {FilterState} state
+ * @returns {Object[]}
+ */
+export function filterCharacters(characters, state) {
+  return characters.filter((c) =>
+    matchesSet(state.align, ALIGNMENTS, c.alignment)
+    && matchesSet(state.elem, ELEMENTS, c.element)
+    && matchesSet(state.bond, BONDS, c.bond)
+    && matchesQuery(c, state.q));
+}
+
+/**
+ * 取得雙語欄位（如 name、dialogue.answer）在指定語言的文字，缺少時退回另一語言。
+ * @param {{zh: string|null, ja: string|null}|undefined} field
+ * @param {string} lang 'zh' | 'ja'
+ * @returns {{text: string|null, fallback: boolean}} fallback 為 true 表示顯示的是另一語言
+ */
+export function localized(field, lang) {
+  const other = lang === 'ja' ? 'zh' : 'ja';
+  if (field?.[lang]) return { text: field[lang], fallback: false };
+  if (field?.[other]) return { text: field[other], fallback: true };
+  return { text: null, fallback: false };
+}
+
+/**
+ * 依序比較兩個值在給定順序表中的位置；不在表中（含 null）一律排最後。
+ * @param {string[]} order
+ * @returns {(a: string|null, b: string|null) => number}
+ */
+function byOrder(order) {
+  const rank = (v) => {
+    const i = order.indexOf(v);
+    return i === -1 ? order.length : i;
+  };
+  return (a, b) => rank(a) - rank(b);
+}
+
+/**
+ * 排序角色清單，回傳新陣列。同值時保持原本資料順序（Array.prototype.sort 為 stable）。
+ * - default：依性格（善→中立→惡→未標註）
+ * - name：依目前語言的名稱，locale-aware
+ * - option：依正確選項 1→3，未知排最後
+ * - bond：依緣份 力→靈，未知排最後
+ * @param {Object[]} characters
+ * @param {string} key 見 SORT_KEYS
+ * @param {string} lang 'zh' | 'ja'
+ * @returns {Object[]}
+ */
+export function sortCharacters(characters, key, lang) {
+  const list = [...characters];
+  switch (key) {
+    case 'name': {
+      const collator = new Intl.Collator(lang === 'ja' ? 'ja' : 'zh-Hant-TW');
+      const name = (c) => localized(c.name, lang).text ?? '';
+      return list.sort((a, b) => collator.compare(name(a), name(b)));
+    }
+    case 'option': {
+      const opt = (c) => c.dialogue?.option ?? Infinity;
+      return list.sort((a, b) => opt(a) - opt(b));
+    }
+    case 'bond':
+      return list.sort((a, b) => byOrder(BONDS)(a.bond, b.bond));
+    default:
+      return list.sort((a, b) => byOrder(ALIGNMENTS)(a.alignment, b.alignment));
+  }
+}
+
+/**
+ * 組出 GitHub new issue 網址，帶入 Issue Form 範本與預填標題。
+ * @param {string} repoUrl 例如 `https://github.com/owner/repo`
+ * @param {string} template Issue Form 檔名
+ * @param {string} [title] 預填的 issue 標題；省略則不帶
+ * @returns {string}
+ */
+export function buildIssueUrl(repoUrl, template, title) {
+  const params = new URLSearchParams({ template });
+  if (title) params.set('title', title);
+  return `${repoUrl.replace(/\/+$/, '')}/issues/new?${params}`;
+}
+
+/**
+ * 從角色清單收集不重複的貢獻者名稱，依首次出現順序。
+ * contributor 欄位可用逗號或頓號分隔多人。
+ * @param {Object[]} characters
+ * @returns {string[]}
+ */
+export function collectContributors(characters) {
+  const names = characters
+    .flatMap((c) => (c.contributor ?? '').split(/[,、]/))
+    .map((s) => s.trim())
+    .filter(Boolean);
+  return [...new Set(names)];
+}

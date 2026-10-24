@@ -1,0 +1,1178 @@
+[
+  {
+    "id": "daniel",
+    "name": {
+      "zh": "丹尼爾",
+      "ja": "ダニエル"
+    },
+    "avatar": null,
+    "alignment": "good",
+    "element": "earth",
+    "rarity": "named",
+    "dialogue": {
+      "option": 2,
+      "answer": {
+        "zh": "得到上帝寬恕",
+        "ja": null
+      }
+    },
+    "bond": "str",
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "eckart",
+    "name": {
+      "zh": "埃卡特",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "good",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 3,
+      "answer": {
+        "zh": "留芳百世名聲",
+        "ja": null
+      }
+    },
+    "bond": "luk",
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "asha",
+    "name": {
+      "zh": "亞莎",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "good",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 2,
+      "answer": {
+        "zh": "與夥伴的回憶",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "chloe",
+    "name": {
+      "zh": "克洛艾",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "good",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 2,
+      "answer": {
+        "zh": "一個人安靜得死",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "valdor",
+    "name": {
+      "zh": "瓦爾多爾",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "good",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": "我會守護好夥伴",
+        "ja": null
+      }
+    },
+    "bond": "int",
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "lanavier",
+    "name": {
+      "zh": "拉納維爾",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "good",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 3,
+      "answer": {
+        "zh": "就照原本的樣子",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "bugen",
+    "name": {
+      "zh": "武源",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "good",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 3,
+      "answer": {
+        "zh": "只會幫助夥伴",
+        "ja": null
+      }
+    },
+    "bond": "str",
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "bekanan",
+    "name": {
+      "zh": "貝卡南",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "good",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 1,
+      "answer": {
+        "zh": "我怕死",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "rivanna",
+    "name": {
+      "zh": "莉瓦娜",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "good",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 2,
+      "answer": {
+        "zh": null,
+        "ja": "がむしゃらに戦え"
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "eulalia",
+    "name": {
+      "zh": "歐拉莉亞",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "good",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 2,
+      "answer": {
+        "zh": null,
+        "ja": "悔しいがなければ"
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "abenis",
+    "name": {
+      "zh": "雅蓓妮絲",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "good",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": "想守護的人身旁",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "camille",
+    "name": {
+      "zh": "卡米爾",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "good",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 1,
+      "answer": {
+        "zh": "死後什麼都不會留下",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "anemone",
+    "name": {
+      "zh": null,
+      "ja": "アネモネ"
+    },
+    "avatar": null,
+    "alignment": "good",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 1,
+      "answer": {
+        "zh": null,
+        "ja": "人は無知だからだ"
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": false
+  },
+  {
+    "id": "marianna",
+    "name": {
+      "zh": "瑪麗安娜",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "good",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 2,
+      "answer": {
+        "zh": "（錢只是救人的手段）",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": false
+  },
+  {
+    "id": "adam",
+    "name": {
+      "zh": "亞當",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": "light",
+    "rarity": "legendary",
+    "dialogue": {
+      "option": 1,
+      "answer": {
+        "zh": "為了尋求豐厚的回報",
+        "ja": null
+      }
+    },
+    "bond": "int",
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "zeruf",
+    "name": {
+      "zh": "哲魯夫",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 2,
+      "answer": {
+        "zh": "留下名聲之類的",
+        "ja": null
+      }
+    },
+    "bond": "str",
+    "contributor": "",
+    "verified": false
+  },
+  {
+    "id": "charlilinia",
+    "name": {
+      "zh": "夏莉莉妮雅",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 3,
+      "answer": {
+        "zh": "沒空想這種事",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "seppa",
+    "name": {
+      "zh": "切羽",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 3,
+      "answer": {
+        "zh": "我對是生是死沒興趣",
+        "ja": null
+      }
+    },
+    "bond": "spi",
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "amelia",
+    "name": {
+      "zh": "阿米莉婭",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": "一切的終結",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "alice",
+    "name": {
+      "zh": "愛麗絲",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": "water",
+    "rarity": "legendary",
+    "dialogue": {
+      "option": 1,
+      "answer": {
+        "zh": "要等人生滿足以後",
+        "ja": null
+      }
+    },
+    "bond": "fai",
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "gandalf",
+    "name": {
+      "zh": "甘道夫",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 1,
+      "answer": {
+        "zh": "死在陌生土地的路邊",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "bakshi",
+    "name": {
+      "zh": "巴克什",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 2,
+      "answer": {
+        "zh": "自由自在",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "milana",
+    "name": {
+      "zh": "米拉娜",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": "溫暖的家",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "galina",
+    "name": {
+      "zh": "嘉莉娜",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": "完成使命",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "viviana",
+    "name": {
+      "zh": "薇薇安娜",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 2,
+      "answer": {
+        "zh": "不會賭命",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "galbados",
+    "name": {
+      "zh": "迦魯巴多斯",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": "鄉下隱居",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "rinne",
+    "name": {
+      "zh": "凜音",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 3,
+      "answer": {
+        "zh": "什麼都沒感覺到",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "elda",
+    "name": {
+      "zh": "埃爾達",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": "我希望活得不長也不短",
+        "ja": null
+      }
+    },
+    "bond": "str",
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "yunajinki",
+    "name": {
+      "zh": "柚奈壬姬",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": "我答應你",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "savia",
+    "name": {
+      "zh": "薩維亞",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 1,
+      "answer": {
+        "zh": null,
+        "ja": "今を楽しめ"
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "raffaello",
+    "name": {
+      "zh": "拉斐洛",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 2,
+      "answer": {
+        "zh": null,
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "yemil",
+    "name": {
+      "zh": "耶米勒",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 3,
+      "answer": {
+        "zh": null,
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "felicia",
+    "name": {
+      "zh": "菲莉西雅",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "evil",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 1,
+      "answer": {
+        "zh": "不想面對自己的真心",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "philip",
+    "name": {
+      "zh": "菲利普",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "neutral",
+    "element": "water",
+    "rarity": "named",
+    "dialogue": {
+      "option": 1,
+      "answer": {
+        "zh": "與故人有關聯的人",
+        "ja": null
+      }
+    },
+    "bond": "agi",
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "yekaterina",
+    "name": {
+      "zh": "葉卡捷琳娜",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "neutral",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 1,
+      "answer": {
+        "zh": "提升實力",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "shiou",
+    "name": {
+      "zh": "獅櫻",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "neutral",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 2,
+      "answer": {
+        "zh": "今後想做的事",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "jean",
+    "name": {
+      "zh": "讓",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "neutral",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": "我想讓願望成真",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "barbara",
+    "name": {
+      "zh": "芭芭拉",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "neutral",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": "當然有必須活下去的理由",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "elise",
+    "name": {
+      "zh": "艾莉賽",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "neutral",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": "親切的人",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "furt",
+    "name": {
+      "zh": "芙爾特",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "neutral",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": "救世主",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "olive",
+    "name": {
+      "zh": "奧利芙",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "neutral",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": "與死亡對抗",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "ophelia",
+    "name": {
+      "zh": "奧菲麗雅",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "neutral",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": "會留下意志或思想",
+        "ja": null
+      }
+    },
+    "bond": "str",
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "clarissa",
+    "name": {
+      "zh": "克拉麗莎",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "neutral",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 3,
+      "answer": {
+        "zh": null,
+        "ja": "生きることだけ考える"
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "aldric",
+    "name": {
+      "zh": "奧爾德里克",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "neutral",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 1,
+      "answer": {
+        "zh": "決定目標並實現",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "dino",
+    "name": {
+      "zh": "迪諾",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "neutral",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 3,
+      "answer": {
+        "zh": "被決定好的命運",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "albaris",
+    "name": {
+      "zh": "阿爾伯里斯",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "neutral",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 1,
+      "answer": {
+        "zh": "徹底利用",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "benjamin",
+    "name": {
+      "zh": "本傑明",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "neutral",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 1,
+      "answer": {
+        "zh": "害怕死",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "deborah",
+    "name": {
+      "zh": "黛波拉",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "neutral",
+    "element": "light",
+    "rarity": "legendary",
+    "dialogue": {
+      "option": 2,
+      "answer": {
+        "zh": "祭拜",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "plish",
+    "name": {
+      "zh": "普利修",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "neutral",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 3,
+      "answer": {
+        "zh": "這也很有冒險的感覺",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "heinrico",
+    "name": {
+      "zh": "海因里科",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": "neutral",
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 2,
+      "answer": {
+        "zh": "死亡的痛苦也是冒險的一部份",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": true
+  },
+  {
+    "id": "eldorado",
+    "name": {
+      "zh": "埃爾多拉多",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": null,
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": null,
+      "answer": {
+        "zh": "在夥伴的陪伴下安享天年",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": false
+  },
+  {
+    "id": "alex",
+    "name": {
+      "zh": "亞曆克斯",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": null,
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 1,
+      "answer": {
+        "zh": "名聲",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": false
+  },
+  {
+    "id": "emil",
+    "name": {
+      "zh": "埃米爾",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": null,
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 3,
+      "answer": {
+        "zh": "找到容身之處",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": false
+  },
+  {
+    "id": "linalia",
+    "name": {
+      "zh": "莉娜莉婭",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": null,
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 1,
+      "answer": {
+        "zh": null,
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": false
+  },
+  {
+    "id": "enikki",
+    "name": {
+      "zh": "艾妮琪",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": null,
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 2,
+      "answer": {
+        "zh": "死是冒險的結果",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": false
+  },
+  {
+    "id": "iamas",
+    "name": {
+      "zh": "伊亞瑪斯",
+      "ja": null
+    },
+    "avatar": null,
+    "alignment": null,
+    "element": null,
+    "rarity": null,
+    "dialogue": {
+      "option": 2,
+      "answer": {
+        "zh": "（淺淺一抹微笑）",
+        "ja": null
+      }
+    },
+    "bond": null,
+    "contributor": "",
+    "verified": false
+  }
+]

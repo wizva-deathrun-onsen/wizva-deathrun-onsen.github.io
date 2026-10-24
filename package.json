@@ -1,0 +1,10 @@
+{
+  "name": "wizva-deathrun-onsen",
+  "private": true,
+  "description": "WizVA 送死流對話選項紀錄 / WizVA Death-Run Onsen Dialogue Guide",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "serve": "python3 -m http.server 8000"
+  }
+}

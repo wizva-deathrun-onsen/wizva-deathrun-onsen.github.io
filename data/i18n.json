@@ -1,0 +1,73 @@
+{
+  "ui": {
+    "title": "WizVA 送死流對話選項紀錄",
+    "subtitle": "辟邪除妖 Variants Daphne／送死流泡泉水的固定對話與緣份",
+    "notice": "送死流對話只在隊伍有成員陣亡後泡泉水時觸發，與一般泉水的隨機對話不同。好感度會作用於隊伍中同性格的所有隊員。",
+    "search": "搜尋名稱或選項內容",
+    "lang": "名稱與對話語言",
+    "langZh": "中文",
+    "langJa": "日本語",
+    "filterAlignment": "性格",
+    "filterElement": "屬性",
+    "filterBond": "緣份",
+    "sort": "排序",
+    "sortDefault": "預設（依性格）",
+    "sortName": "名稱",
+    "sortOption": "正確選項",
+    "sortBond": "緣份",
+    "reset": "重設篩選",
+    "count": "顯示 {shown} / {total} 位",
+    "colAvatar": "頭像",
+    "colName": "名稱",
+    "colAlignment": "性格",
+    "colElement": "屬性",
+    "colRarity": "稀有度",
+    "colOption": "選項",
+    "colAnswer": "選項內容",
+    "colBond": "緣份",
+    "colReport": "回報",
+    "report": "回報",
+    "reportAll": "回報新角色／修正資料",
+    "reportTitlePrefix": "[資料回報]",
+    "unknown": "?",
+    "none": "—",
+    "unverified": "待確認",
+    "unverifiedHint": "資料來源有疑義或性格未標註，歡迎回報確認",
+    "fallbackHint": "此語言尚無資料，顯示另一語言",
+    "empty": "沒有符合條件的角色",
+    "loadError": "資料載入失敗，請重新整理頁面",
+    "footerCopyright": "遊戲內容與頭像素材版權歸原廠（Drecom）及相關權利人所有，本站為非官方玩家整理。",
+    "footerSources": "資料來源",
+    "footerSourceBaha": "巴哈姆特〈NPC結緣數值 & 送死流泉水對話選項 分享〉及留言補充",
+    "footerSourceNames": "角色名稱與頭像對照",
+    "footerContributors": "資料補充",
+    "footerRepo": "GitHub"
+  },
+  "alignment": {
+    "good": "善",
+    "neutral": "中立",
+    "evil": "惡"
+  },
+  "element": {
+    "light": "光",
+    "dark": "暗",
+    "water": "水",
+    "fire": "火",
+    "wind": "風",
+    "earth": "土",
+    "none": "無"
+  },
+  "bond": {
+    "str": "力",
+    "int": "智",
+    "agi": "敏",
+    "fai": "信",
+    "luk": "命",
+    "spi": "靈"
+  },
+  "rarity": {
+    "nameless": "無名",
+    "named": "有名",
+    "legendary": "傳說"
+  }
+}
