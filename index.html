@@ -22,15 +22,15 @@
     快取版本號：每次部署前執行 `npm run bump` 更新（會同時改 CSS 與 import map）。
     import map 讓各 JS module 帶上 ?v=，瀏覽器才不會混用新舊版本的檔案。
   -->
-  <link rel="stylesheet" href="css/style.css?v=202610242128">
+  <link rel="stylesheet" href="css/style.css?v=202610242142">
   <script type="importmap">
     {
       "imports": {
-        "./js/app.js": "./js/app.js?v=202610242128",
-        "./js/config.js": "./js/config.js?v=202610242128",
-        "./js/filters.js": "./js/filters.js?v=202610242128",
-        "./js/i18n.js": "./js/i18n.js?v=202610242128",
-        "./js/theme.js": "./js/theme.js?v=202610242128"
+        "./js/app.js": "./js/app.js?v=202610242142",
+        "./js/config.js": "./js/config.js?v=202610242142",
+        "./js/filters.js": "./js/filters.js?v=202610242142",
+        "./js/i18n.js": "./js/i18n.js?v=202610242142",
+        "./js/theme.js": "./js/theme.js?v=202610242142"
       }
     }
   </script>
@@ -49,6 +49,38 @@
       <p class="subtitle" data-i18n="subtitle"></p>
       <p class="notice" data-i18n="notice"></p>
       <p class="disclaimer" role="note" data-i18n="disclaimer"></p>
+
+      <!-- 教學內容較長且含圖片與巢狀清單，直接寫在 HTML；<details> 不需要 JS 就能摺疊。 -->
+      <details class="guide">
+        <summary>送死流泡泉水執行教學</summary>
+        <div class="guide-body">
+          <h2>事前準備</h2>
+          <ol>
+            <li>準備幾隻 LV1 的送死角色（推薦無名僧侶），最少 2 隻。</li>
+            <li>注意面具人（主角）的性格，以及預計要成為有緣人的角色性格。<br>
+              例如：要刷丹尼爾（力緣），因為他是善角色，若面具人（主角）不是中立，隊伍中需要有其他善角色才行。</li>
+          </ol>
+
+          <h2>實際流程</h2>
+          <ol>
+            <li>隊伍帶上目標要刷成有緣人的角色（可以多位）。</li>
+            <li>開始執行：
+              <ol>
+                <li>前往第一章迷宮 B7F（位置如下圖）。</li>
+                <li>踩毒（圖中 ①），讓 LV1 角色死亡。</li>
+                <li>泡泉水（圖中 ②），有機會觸發角色對死亡看法的對話，依下方表格選擇正確選項。</li>
+              </ol>
+              <figure>
+                <img src="assets/guide/b7f-map.webp" width="800" height="512" loading="lazy"
+                     alt="第一章迷宮 B7F 地圖：① 毒沼位置，② 泉水位置">
+                <figcaption>第一章迷宮 B7F：① 毒沼、② 泉水</figcaption>
+              </figure>
+            </li>
+            <li>哈肯離開，LV1 角色若有意志力，會直接以 1 滴血復活。</li>
+            <li>重複步驟 1。</li>
+          </ol>
+        </div>
+      </details>
     </div>
   </header>
 
