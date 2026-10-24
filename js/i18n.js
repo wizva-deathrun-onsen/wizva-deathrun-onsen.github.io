@@ -4,10 +4,11 @@
 
 /**
  * 載入 data/i18n.json。使用相對路徑以支援 GitHub Pages 子路徑部署。
+ * `cache: 'no-cache'` 讓瀏覽器每次都向伺服器確認是否有新版（沒變時只回 304，成本很低）。
  * @returns {Promise<Object>}
  */
 export async function loadStrings() {
-  const res = await fetch(new URL('../data/i18n.json', import.meta.url));
+  const res = await fetch(new URL('../data/i18n.json', import.meta.url), { cache: 'no-cache' });
   if (!res.ok) throw new Error(`i18n.json: HTTP ${res.status}`);
   return res.json();
 }

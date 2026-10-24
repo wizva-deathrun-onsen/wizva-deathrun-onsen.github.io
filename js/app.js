@@ -250,7 +250,8 @@ function bindEvents() {
 }
 
 async function loadCharacters() {
-  const res = await fetch(new URL('../data/characters.json', import.meta.url));
+  // 資料最常更新，一律向伺服器確認新版，避免玩家看到舊資料。
+  const res = await fetch(new URL('../data/characters.json', import.meta.url), { cache: 'no-cache' });
   if (!res.ok) throw new Error(`characters.json: HTTP ${res.status}`);
   return res.json();
 }

@@ -63,6 +63,18 @@ npm test        # node:test 單元測試（Node 22+）
 - `contributor` 多人用逗號或頓號分隔
 - `id` 為 kebab-case 且不可重複（測試會檢查）
 
+## 部署與快取
+
+GitHub Pages 會讓瀏覽器快取檔案約 10 分鐘。如果新版 `index.html` 搭配到舊版 JS，頁面可能會壞掉，所以每次改動 JS 或 CSS 後，push 前都要執行：
+
+```sh
+npm run bump   # 更新 index.html 裡 CSS 與 import map 的 ?v= 版本號
+npm test       # 會檢查版本號是否一致、import map 是否涵蓋 js/ 下所有檔案
+```
+
+- 新增 `js/` 檔案時，要把它加進 `index.html` 的 import map
+- `data/*.json` 用 `cache: 'no-cache'` 讀取，只改資料時不需要 bump
+
 ## 處理社群回報
 
 1. 在 Issue 確認內容（有截圖優先採信）
