@@ -469,17 +469,17 @@ td.colNo { white-space: nowrap; }
 .missing { color: var(--muted); }
 .contributor { display: block; font-size: 0.75rem; color: var(--muted); }
 .fallback { font-style: italic; }
-.unverified {
+.tag {
   display: inline-block;
   margin-left: 6px;
   padding: 0 6px;
   border-radius: 4px;
-  background: var(--warn-bg);
-  color: var(--warn);
   font-size: 0.75rem;
   font-weight: 600;
   vertical-align: middle;
 }
+.unverified { background: var(--warn-bg); color: var(--warn); }
+.no-data { background: var(--surface-2); color: var(--muted); border: 1px dashed var(--border); }
 .report { font-size: 0.9rem; white-space: nowrap; }
 
 .empty, .error {

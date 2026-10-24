@@ -36,6 +36,8 @@
     "unknown": "?",
     "none": "—",
     "unverified": "待確認",
+    "noData": "無資料待回報",
+    "noDataHint": "還沒有這位角色的送死流對話紀錄，歡迎點選「回報」提供",
     "nameZhMissing": "中文名待查",
     "nameJaMissing": "日文名待補",
     "unverifiedHint": "資料來源有疑義或性格未標註，歡迎回報確認",

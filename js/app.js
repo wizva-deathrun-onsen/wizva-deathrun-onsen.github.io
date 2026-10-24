@@ -8,7 +8,7 @@ import {
   ALIGNMENTS, ELEMENTS, BONDS,
   defaultState, parseQuery, serializeQuery,
   filterCharacters, sortCharacters, localized,
-  buildIssueUrl,
+  buildIssueUrl, hasDialogue,
 } from './filters.js';
 import { loadStrings, format } from './i18n.js';
 import { initThemeToggle } from './theme.js';
@@ -168,8 +168,10 @@ function renderRow(c) {
   // 名稱固定兩行：中文為主、日文為輔，缺少的一方顯示佔位文字，讓每列高度一致。
   const zhLine = el('span', { className: 'name-zh' },
     c.name.zh ? el('span', { textContent: c.name.zh }) : el('span', { className: 'missing', textContent: strings.ui.nameZhMissing }));
-  if (!c.verified) {
-    zhLine.append(el('span', { className: 'unverified', textContent: strings.ui.unverified, title: strings.ui.unverifiedHint }));
+  if (!hasDialogue(c)) {
+    zhLine.append(el('span', { className: 'tag no-data', textContent: strings.ui.noData, title: strings.ui.noDataHint }));
+  } else if (!c.verified) {
+    zhLine.append(el('span', { className: 'tag unverified', textContent: strings.ui.unverified, title: strings.ui.unverifiedHint }));
   }
   const jaLine = c.name.ja
     ? el('span', { className: 'name-ja', lang: 'ja', textContent: c.name.ja })
