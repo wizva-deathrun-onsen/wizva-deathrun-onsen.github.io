@@ -24,6 +24,5 @@
 ## 資料來源
 
 - 巴哈姆特〈[【心得】NPC結緣數值 & 送死流泉水對話選項 分享](https://forum.gamer.com.tw/C.php?bsn=70180&snA=3090)〉及留言補充
-- 角色名稱與頭像對照：[leveling-guide](https://leveling-guide-staging.web.app/zh-Hans/wizva/character/)（人工整理，未自動爬取）
 
 遊戲內容與頭像素材版權歸原廠及相關權利人所有，本站為非官方玩家整理。

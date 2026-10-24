@@ -69,3 +69,10 @@ npm test        # node:test 單元測試（Node 22+）
 2. 更新 `data/characters.json`，把回報者的 GitHub 帳號填進 `contributor`
 3. 執行 `npm test` 確認資料格式正確
 4. commit 訊息附上 `Closes #<issue 編號>`，push 後 Issue 會自動關閉
+
+## 資料來源
+
+- 送死流對話與緣份：巴哈姆特〈[【心得】NPC結緣數值 & 送死流泉水對話選項 分享](https://forum.gamer.com.tw/C.php?bsn=70180&snA=3090)〉及留言補充
+- 角色名稱（繁中／日文）、編號、屬性、性格、稀有度與頭像：[leveling-guide](https://leveling-guide-staging.web.app/zh-Hant/wizva/character/)
+  - 該站 robots.txt 禁止自動存取，不要寫爬蟲抓取
+  - 更新方式：在瀏覽器開啟冒險者頁面（繁中、日文各一次），於 Console 執行收集用的 snippet 並捲到底，把匯出的 JSON 交給 Claude 合併
