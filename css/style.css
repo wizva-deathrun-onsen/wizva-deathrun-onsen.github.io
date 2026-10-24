@@ -237,6 +237,18 @@ legend {
   text-decoration: underline;
   cursor: pointer;
 }
+.link-button:disabled {
+  color: var(--muted);
+  text-decoration: none;
+  opacity: 0.6;
+  cursor: default;
+}
+.bulk-actions {
+  display: inline-flex;
+  gap: 10px;
+  margin-left: 6px;
+  font-size: 0.88rem;
+}
 .count { color: var(--muted); font-size: 0.92rem; }
 .report-all {
   margin-left: auto;

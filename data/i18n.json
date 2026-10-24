@@ -18,6 +18,8 @@
     "sortOption": "正確選項",
     "sortBond": "緣份",
     "reset": "重設篩選",
+    "selectAll": "全選",
+    "selectNone": "全部取消",
     "count": "顯示 {shown} / {total} 位",
     "colAvatar": "頭像",
     "colName": "名稱",

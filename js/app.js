@@ -76,6 +76,29 @@ function buildChips(fieldsetId, key, values, labels) {
     const label = el('label', { className: `chip chip-${key} chip-${v}` }, input, el('span', { textContent: labels[v] }));
     fs.append(label);
   }
+
+  // 全選／全部取消。按鈕在已經是該狀態時會 disabled，見 syncBulkButtons。
+  const bulk = (labelKey, selectAll) => {
+    const button = el('button', { type: 'button', className: 'link-button bulk', textContent: strings.ui[labelKey] });
+    button.dataset.key = key;
+    button.dataset.all = String(selectAll);
+    button.addEventListener('click', () => {
+      state[key] = new Set(selectAll ? values : []);
+      syncControls();
+      update();
+    });
+    return button;
+  };
+  fs.append(el('span', { className: 'bulk-actions' }, bulk('selectAll', true), bulk('selectNone', false)));
+}
+
+/** 依目前勾選數量啟用／停用各組的全選與全部取消按鈕。 */
+function syncBulkButtons() {
+  const sizes = { align: ALIGNMENTS.length, elem: ELEMENTS.length, bond: BONDS.length };
+  for (const button of document.querySelectorAll('.controls .bulk')) {
+    const { key, all } = button.dataset;
+    button.disabled = all === 'true' ? state[key].size === sizes[key] : state[key].size === 0;
+  }
 }
 
 /** 把 state 反映回控制項（初始化、重設、瀏覽器上一頁時使用）。 */
@@ -196,6 +219,7 @@ function writeUrl() {
 
 function update() {
   writeUrl();
+  syncBulkButtons();
   render();
 }
 
@@ -253,6 +277,7 @@ async function main() {
   $('#contributors-line').hidden = !$('#contributors').textContent;
 
   syncControls();
+  syncBulkButtons();
   bindEvents();
   render();
 }
