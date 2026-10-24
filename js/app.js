@@ -199,7 +199,8 @@ function renderRow(c) {
     cell('colOption', option
       ? el('span', { className: 'option', textContent: String(option) })
       : el('span', { className: 'missing', textContent: strings.ui.unknown })),
-    cell('colAnswer', localizedText(answer, strings.ui.unknown)),
+    cell('colAnswer', localizedText(answer, strings.ui.unknown),
+      ...(c.contributor ? [el('span', { className: 'contributor', textContent: format(strings.ui.contributedBy, { name: c.contributor }) })] : [])),
     cell('colBond', badge('bond', c.bond)),
     cell('colReport', report),
   );

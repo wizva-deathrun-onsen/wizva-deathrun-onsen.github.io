@@ -22,15 +22,15 @@
     快取版本號：每次部署前執行 `npm run bump` 更新（會同時改 CSS 與 import map）。
     import map 讓各 JS module 帶上 ?v=，瀏覽器才不會混用新舊版本的檔案。
   -->
-  <link rel="stylesheet" href="css/style.css?v=202610242115">
+  <link rel="stylesheet" href="css/style.css?v=202610242121">
   <script type="importmap">
     {
       "imports": {
-        "./js/app.js": "./js/app.js?v=202610242115",
-        "./js/config.js": "./js/config.js?v=202610242115",
-        "./js/filters.js": "./js/filters.js?v=202610242115",
-        "./js/i18n.js": "./js/i18n.js?v=202610242115",
-        "./js/theme.js": "./js/theme.js?v=202610242115"
+        "./js/app.js": "./js/app.js?v=202610242121",
+        "./js/config.js": "./js/config.js?v=202610242121",
+        "./js/filters.js": "./js/filters.js?v=202610242121",
+        "./js/i18n.js": "./js/i18n.js?v=202610242121",
+        "./js/theme.js": "./js/theme.js?v=202610242121"
       }
     }
   </script>
@@ -111,7 +111,7 @@
     <div class="wrap">
       <p data-i18n="footerCopyright"></p>
       <p><span data-i18n="footerSources"></span>：
-        <a id="src-baha" target="_blank" rel="noopener" data-i18n="footerSourceBaha"></a></p>
+        <a id="src-baha" target="_blank" rel="noopener" data-i18n="footerSourceBaha"></a>（<span data-i18n="footerAuthor"></span>）</p>
       <p id="contributors-line" hidden><span data-i18n="footerContributors"></span>：<span id="contributors"></span></p>
     </div>
   </footer>

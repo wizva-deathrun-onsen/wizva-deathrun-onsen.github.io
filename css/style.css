@@ -329,6 +329,7 @@ td.colNo { white-space: nowrap; }
 .element-none { color: var(--none); }
 
 .missing { color: var(--muted); }
+.contributor { display: block; font-size: 0.75rem; color: var(--muted); }
 .fallback { font-style: italic; }
 .unverified {
   display: inline-block;

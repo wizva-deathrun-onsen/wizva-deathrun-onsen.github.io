@@ -43,8 +43,10 @@
     "loadError": "資料載入失敗，請重新整理頁面",
     "footerCopyright": "遊戲內容與頭像素材版權歸原廠（Drecom）及相關權利人所有，本站為非官方玩家整理。",
     "footerSources": "資料來源",
-    "footerSourceBaha": "巴哈姆特〈NPC結緣數值 & 送死流泉水對話選項 分享〉及留言補充",
-    "footerContributors": "資料補充"
+    "footerSourceBaha": "巴哈姆特〈NPC結緣數值 & 送死流泉水對話選項 分享〉",
+    "footerAuthor": "原作者 渢雨嵐，以及留言補充的玩家",
+    "footerContributors": "資料補充",
+    "contributedBy": "提供：{name}"
   },
   "alignment": {
     "good": "善",
