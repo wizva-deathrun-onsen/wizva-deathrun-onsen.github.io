@@ -14,10 +14,11 @@ curl -s "https://api.github.com/repos/wizva-deathrun-onsen/wizva-deathrun-onsen.
 
 每筆回報：
 
-1. 用 Issue 的日文名找到 `data/characters.json` 的角色，核對性格、屬性；不一致時先問維護者
-2. 更新 `dialogue.option`、`dialogue.answer`；選項文字是日文就放 `answer.ja`
-3. 回報者暱稱（備註欄「回報者」）加進 `contributors`；有明確文字後 `verified` 設為 `true`
-4. `npm test` 全部通過後 commit，訊息附上每筆的 `Closes #<編號>`
+1. 下拉欄位顯示 `_No response_` 代表回報者沒選；性格或正確選項沒選時不要猜，先在 Issue 留言詢問
+2. 用 Issue 的日文名找到 `data/characters.json` 的角色，核對性格、屬性；不一致時先問維護者
+3. 更新 `dialogue.option`、`dialogue.answer`；選項文字是日文就放 `answer.ja`
+4. 回報者暱稱（備註欄「回報者」）加進 `contributors`；有明確文字後 `verified` 設為 `true`
+5. `npm test` 全部通過後 commit，訊息附上每筆的 `Closes #<編號>`
 
 ## 其他慣例
 

@@ -26,17 +26,20 @@ body:
     validations:
       required: false
 
+  # GitHub 的必填下拉選單會預設選第一項，回報者忘了改就會送出錯誤資料，
+  # 所以下拉選單一律設為非必填（預設為未選擇），改用說明文字提醒。
   - type: dropdown
     id: alignment
     attributes:
       label: 性格
+      description: 必選，請依角色實際性格選擇
       options:
         - 善
         - 中立
         - 惡
         - 不確定
     validations:
-      required: true
+      required: false
 
   - type: dropdown
     id: element
@@ -58,14 +61,14 @@ body:
     id: option
     attributes:
       label: 正確選項
-      description: 由上往下數的第幾個選項
+      description: 必選，由上往下數的第幾個選項
       options:
         - "1"
         - "2"
         - "3"
         - 不確定
     validations:
-      required: true
+      required: false
 
   - type: input
     id: answer
