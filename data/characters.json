@@ -19,6 +19,7 @@
     },
     "bond": "str",
     "contributors": [
+      "渢雨嵐",
       "低調的存在"
     ],
     "verified": true
@@ -43,6 +44,7 @@
     },
     "bond": "luk",
     "contributors": [
+      "渢雨嵐",
       "刀疤熊"
     ],
     "verified": true
@@ -379,7 +381,9 @@
       }
     },
     "bond": "str",
-    "contributors": [],
+    "contributors": [
+      "渢雨嵐"
+    ],
     "verified": false
   },
   {
@@ -401,7 +405,9 @@
       }
     },
     "bond": null,
-    "contributors": [],
+    "contributors": [
+      "渢雨嵐"
+    ],
     "verified": true
   },
   {
@@ -809,7 +815,9 @@
       }
     },
     "bond": "agi",
-    "contributors": [],
+    "contributors": [
+      "渢雨嵐"
+    ],
     "verified": true
   },
   {
