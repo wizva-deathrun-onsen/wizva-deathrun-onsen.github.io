@@ -27,20 +27,22 @@ body:
     validations:
       required: false
 
-  # GitHub 的必填下拉選單會預設選第一項，回報者忘了改就會送出錯誤資料，
-  # 所以下拉選單一律設為非必填（預設為未選擇），改用說明文字提醒。
+  # GitHub 的必填下拉選單會預設選第一項。性格要顯示必填的紅色 *，
+  # 所以第一項放「請選擇」佔住預設值，送出後由 validate-report.yml 把它當成未填。
+  # 其他下拉選單維持非必填（預設為 None），避免回報者忘了改而送出錯誤值。
   - type: dropdown
     id: alignment
     attributes:
       label: 性格
-      description: 必選，請依角色實際性格選擇
+      description: 請依角色實際性格選擇
       options:
+        - 請選擇
         - 善
         - 中立
         - 惡
         - 不確定
     validations:
-      required: false
+      required: true
 
   - type: dropdown
     id: element
@@ -61,8 +63,8 @@ body:
   - type: dropdown
     id: option
     attributes:
-      label: 正確選項
-      description: 由上往下數的第幾個選項；與「選項文字」至少填一項
+      label: 正確選項（與選項文字擇一必填）
+      description: 由上往下數的第幾個選項；兩項都填最好
       options:
         - "1"
         - "2"
@@ -74,8 +76,8 @@ body:
   - type: input
     id: answer
     attributes:
-      label: 選項文字
-      description: 正確選項的文字，中文或日文皆可；與「正確選項」至少填一項
+      label: 選項文字（與正確選項擇一必填）
+      description: 正確選項的文字，中文或日文皆可
       placeholder: 例如：得到上帝寬恕
     validations:
       required: false

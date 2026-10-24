@@ -29,7 +29,8 @@ jobs:
             const field = (label) => {
               const m = body.match(new RegExp("###\\s*" + label + "[^\\n]*\\n+([\\s\\S]*?)(?=\\n###|$)"));
               const v = (m ? m[1] : "").trim();
-              return v === "_No response_" ? "" : v;
+              // 「請選擇」是性格下拉選單的佔位選項，等同沒填。
+              return v === "_No response_" || v === "請選擇" ? "" : v;
             };
             const missing = [];
             if (!field("性格")) missing.push("性格");
