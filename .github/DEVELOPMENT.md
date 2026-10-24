@@ -82,7 +82,7 @@ npm test       # 會檢查版本號是否一致、import map 是否涵蓋 js/ �
 | Label | 意思 | 誰來設定 |
 | --- | --- | --- |
 | `待審核` | 新回報，還沒看過 | Issue 範本自動加上 |
-| `已確認` | 維護者看過，可以更新到網站 | 維護者手動加上（同時移除 `待審核`） |
+| `已確認` | 維護者看過，可以更新到網站 | 維護者在 Issue 留言「ok」（或「確認」「沒問題」）會自動換上；也可手動設定 |
 | `資料有誤` | 內容有問題，不採用 | 維護者手動加上並關閉 Issue |
 
 更新資料時只處理標了 `已確認` 的 Issue：
@@ -92,7 +92,7 @@ npm test       # 會檢查版本號是否一致、import map 是否涵蓋 js/ �
 3. 執行 `npm test` 確認資料格式正確
 4. commit 訊息附上 `Closes #<issue 編號>`，push 後 Issue 會自動關閉
 
-Label 由 `.github/workflows/labels.yml` 建立；新增或改名 label 時改那個檔案即可。
+Label 由 `.github/workflows/labels.yml` 建立；留言確認由 `.github/workflows/approve-report.yml` 處理，只接受有 repo 寫入權限的人。
 
 ### 新回報的 Email 通知
 

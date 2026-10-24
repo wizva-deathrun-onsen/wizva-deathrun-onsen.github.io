@@ -1,0 +1,36 @@
+# 維護者在回報 Issue 留言「ok」（或「確認」）時，自動把 label 從「待審核」換成「已確認」。
+# 只接受有寫入權限的人（OWNER / MEMBER / COLLABORATOR）的留言，其他人留言不會觸發。
+name: Approve report by comment
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  issues: write
+
+jobs:
+  approve:
+    if: >-
+      !github.event.issue.pull_request &&
+      contains(github.event.issue.labels.*.name, 'data-report') &&
+      contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mark as confirmed
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          BODY: ${{ github.event.comment.body }}
+          NUMBER: ${{ github.event.issue.number }}
+        run: |
+          # 去掉前後空白與句尾標點後比對，大小寫不拘。
+          text=$(printf '%s' "$BODY" | tr '[:upper:]' '[:lower:]' | sed -E 's/^[[:space:]]+|[[:space:][:punct:]！。～~]+$//g')
+          case "$text" in
+            ok|okay|確認|沒問題)
+              gh issue edit "$NUMBER" --add-label "已確認" --remove-label "待審核"
+              ;;
+            *)
+              echo "留言不是確認指令，略過"
+              ;;
+          esac
