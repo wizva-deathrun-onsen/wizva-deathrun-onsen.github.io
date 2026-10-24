@@ -20,11 +20,12 @@ npm test        # node:test 單元測試（Node 22+）
 | `js/app.js` | 進入點、render |
 | `js/filters.js` | 純函式：篩選／排序／搜尋／URL query |
 | `js/i18n.js` | 語言偏好、UI 字串載入 |
+| `js/theme.js` | 淺色／深色切換（初次套用在 `index.html` 的 inline script，兩邊 storage key 需一致） |
 | `js/config.js` | repo 網址等常數（唯一定義處） |
 | `data/characters.json` | 角色資料 |
 | `data/i18n.json` | UI 字串、性格／屬性／緣份／稀有度名稱 |
 | `assets/avatars/` | 頭像 |
-| `tests/filters.test.js` | 單元測試 |
+| `tests/*.test.js` | 單元測試 |
 
 ## 資料格式（`data/characters.json`）
 

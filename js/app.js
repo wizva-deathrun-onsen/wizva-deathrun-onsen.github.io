@@ -11,6 +11,7 @@ import {
   buildIssueUrl, collectContributors,
 } from './filters.js';
 import { loadLang, saveLang, resolveLang, loadStrings, format } from './i18n.js';
+import { initThemeToggle } from './theme.js';
 
 /** @type {import('./filters.js').FilterState} */
 let state;
@@ -244,6 +245,7 @@ async function main() {
 
   applyStaticStrings();
   applyLinks();
+  initThemeToggle($('#theme-toggle'), strings.ui);
   buildChips('f-align', 'align', ALIGNMENTS, strings.alignment);
   buildChips('f-elem', 'elem', ELEMENTS, strings.element);
   buildChips('f-bond', 'bond', BONDS, strings.bond);
