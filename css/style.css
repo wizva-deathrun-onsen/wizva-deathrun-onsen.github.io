@@ -167,6 +167,50 @@ a { color: var(--link); }
 /* 子步驟顯示成 2.1、2.2 的格式 */
 .guide-body ol ol > li::before { content: "2." counter(sub) " "; color: var(--muted); }
 .guide-body li { margin: 2px 0; }
+.guide-body p { position: relative; margin: 0 0 8px; }
+
+/* 名詞右上角的小問號：滑鼠移上或點擊（取得焦點）時顯示說明，不需要 JS。 */
+/* 提示框對齊所在段落（.guide-body p），避免在窄螢幕超出右邊界。 */
+.term { white-space: nowrap; }
+.hint {
+  display: inline-grid;
+  place-items: center;
+  width: 15px;
+  height: 15px;
+  margin-left: 1px;
+  padding: 0;
+  vertical-align: super;
+  border: 1px solid var(--muted);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--muted);
+  font: 700 10px/1 system-ui, sans-serif;
+  cursor: help;
+}
+.hint:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.tooltip {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 6px);
+  z-index: 10;
+  width: max-content;
+  max-width: min(320px, 100%);
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: var(--text);
+  color: var(--bg);
+  font-size: 0.8rem;
+  font-weight: 400;
+  white-space: normal;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.term:hover .tooltip,
+.hint:focus + .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
 .guide-body figure { margin: 8px 0 4px; }
 .guide-body img {
   display: block;
