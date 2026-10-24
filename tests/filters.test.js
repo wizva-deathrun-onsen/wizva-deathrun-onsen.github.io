@@ -5,7 +5,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import {
   ALIGNMENTS, ELEMENTS, BONDS,
   defaultState, parseQuery, serializeQuery,
-  matchesQuery, filterCharacters, sortCharacters,
+  matchesQuery, filterCharacters, sortCharacters, hasDialogue,
   localized, buildIssueUrl, collectContributors,
 } from '../js/filters.js';
 import { format } from '../js/i18n.js';
@@ -58,6 +58,15 @@ describe('parseQuery / serializeQuery', () => {
     assert.equal(s.q, '');
     assert.equal(s.sort, 'default');
     assert.equal(s.lang, null);
+    assert.equal(s.known, true);
+  });
+
+  test('show=all 關閉「只顯示已有對話資料」並可 round-trip', () => {
+    assert.equal(parseQuery('?show=all').known, false);
+    const s = defaultState();
+    s.known = false;
+    assert.equal(serializeQuery(s), '?show=all');
+    assert.equal(parseQuery(serializeQuery(s)).known, false);
   });
 
   test('解析清單並忽略不合法值', () => {
@@ -105,6 +114,15 @@ describe('parseQuery / serializeQuery', () => {
   });
 });
 
+describe('hasDialogue', () => {
+  test('有選項或任一語言的選項內容即算有資料', () => {
+    assert.ok(hasDialogue(make('a', { dialogue: { option: 2, answer: { zh: null, ja: null } } })));
+    assert.ok(hasDialogue(make('b', { dialogue: { option: null, answer: { zh: '名聲', ja: null } } })));
+    assert.ok(hasDialogue(make('c', { dialogue: { option: null, answer: { zh: null, ja: '今を楽しめ' } } })));
+    assert.ok(!hasDialogue(make('d')));
+  });
+});
+
 describe('matchesQuery', () => {
   test('比對中文名、日文名與選項內容', () => {
     assert.ok(matchesQuery(daniel, '丹尼'));
@@ -132,6 +150,15 @@ describe('matchesQuery', () => {
 describe('filterCharacters', () => {
   test('全選時包含欄位為 null 的角色', () => {
     assert.equal(filterCharacters(ALL, defaultState()).length, ALL.length);
+  });
+
+  test('known 預設開啟，隱藏沒有對話資料的角色', () => {
+    const blank = make('blank');
+    const s = defaultState();
+    assert.equal(s.known, true);
+    assert.deepEqual(filterCharacters([daniel, blank], s).map((c) => c.id), ['daniel']);
+    s.known = false;
+    assert.deepEqual(filterCharacters([daniel, blank], s).map((c) => c.id), ['daniel', 'blank']);
   });
 
   test('依性格篩選並排除未標註性格', () => {

@@ -9,6 +9,7 @@
     "filterAlignment": "性格",
     "filterElement": "屬性",
     "filterBond": "緣份",
+    "filterKnown": "只顯示已有對話資料的角色",
     "sort": "排序",
     "sortDefault": "預設（依性格）",
     "sortNo": "編號",
@@ -43,9 +44,7 @@
     "footerCopyright": "遊戲內容與頭像素材版權歸原廠（Drecom）及相關權利人所有，本站為非官方玩家整理。",
     "footerSources": "資料來源",
     "footerSourceBaha": "巴哈姆特〈NPC結緣數值 & 送死流泉水對話選項 分享〉及留言補充",
-    "footerSourceNames": "角色名稱與頭像對照",
-    "footerContributors": "資料補充",
-    "footerRepo": "GitHub"
+    "footerContributors": "資料補充"
   },
   "alignment": {
     "good": "善",

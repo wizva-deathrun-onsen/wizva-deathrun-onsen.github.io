@@ -11,5 +11,4 @@ export const ISSUE_TEMPLATE = 'dialogue-report.yml';
 /** 資料來源連結，顯示於頁尾。 */
 export const SOURCES = {
   baha: 'https://forum.gamer.com.tw/C.php?bsn=70180&snA=3090',
-  names: 'https://leveling-guide-staging.web.app/zh-Hans/wizva/character/',
 };

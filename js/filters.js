@@ -25,6 +25,7 @@ export const LANGS = ['zh', 'ja'];
  * @property {Set<string>} elem 選取的屬性
  * @property {Set<string>} bond 選取的緣份
  * @property {string} q 搜尋關鍵字
+ * @property {boolean} known 只顯示已有對話資料（選項或選項內容至少有一項）的角色
  * @property {string} sort 排序鍵，見 SORT_KEYS
  * @property {string|null} lang 語言；null 表示 URL 未指定
  */
@@ -39,6 +40,7 @@ export function defaultState() {
     elem: new Set(ELEMENTS),
     bond: new Set(BONDS),
     q: '',
+    known: true,
     sort: 'default',
     lang: null,
   };
@@ -72,6 +74,7 @@ export function parseQuery(search) {
     elem: parseList(params, 'elem', ELEMENTS),
     bond: parseList(params, 'bond', BONDS),
     q: (params.get('q') ?? '').trim(),
+    known: params.get('show') !== 'all',
     sort: SORT_KEYS.includes(sort) ? sort : 'default',
     lang: LANGS.includes(lang) ? lang : null,
   };
@@ -92,6 +95,7 @@ export function serializeQuery(state) {
     }
   }
   if (state.q) params.set('q', state.q);
+  if (!state.known) params.set('show', 'all');
   if (state.sort && state.sort !== 'default') params.set('sort', state.sort);
   if (state.lang) params.set('lang', state.lang);
   const str = params.toString().replaceAll('%2C', ',');
@@ -140,6 +144,16 @@ export function matchesQuery(character, q) {
 }
 
 /**
+ * 判斷角色是否已有送死流對話資料：知道正確選項，或有任一語言的選項內容。
+ * @param {Object} character
+ * @returns {boolean}
+ */
+export function hasDialogue(character) {
+  const d = character.dialogue;
+  return d?.option != null || Boolean(d?.answer?.zh) || Boolean(d?.answer?.ja);
+}
+
+/**
  * 依篩選狀態過濾角色清單，不改變原陣列與順序。
  * @param {Object[]} characters
  * @param {FilterState} state
@@ -150,6 +164,7 @@ export function filterCharacters(characters, state) {
     matchesSet(state.align, ALIGNMENTS, c.alignment)
     && matchesSet(state.elem, ELEMENTS, c.element)
     && matchesSet(state.bond, BONDS, c.bond)
+    && (!state.known || hasDialogue(c))
     && matchesQuery(c, state.q));
 }
 

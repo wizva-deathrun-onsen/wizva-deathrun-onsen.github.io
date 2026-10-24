@@ -52,9 +52,7 @@ function applyStaticStrings() {
 /** 設定所有外部連結。網址集中於 config.js。 */
 function applyLinks() {
   $('#report-all').href = buildIssueUrl(REPO_URL, ISSUE_TEMPLATE);
-  $('#repo-link').href = REPO_URL;
   $('#src-baha').href = SOURCES.baha;
-  $('#src-names').href = SOURCES.names;
 }
 
 /**
@@ -103,10 +101,11 @@ function syncBulkButtons() {
 
 /** 把 state 反映回控制項（初始化、重設、瀏覽器上一頁時使用）。 */
 function syncControls() {
-  for (const input of document.querySelectorAll('.controls input[type=checkbox]')) {
+  for (const input of document.querySelectorAll('.controls input[type=checkbox][data-key]')) {
     input.checked = state[input.dataset.key].has(input.value);
   }
   $('#q').value = state.q;
+  $('#known').checked = state.known;
   $('#sort').value = state.sort;
 }
 
@@ -233,6 +232,10 @@ function update() {
 function bindEvents() {
   $('#q').addEventListener('input', (e) => {
     state.q = e.target.value.trim();
+    update();
+  });
+  $('#known').addEventListener('change', (e) => {
+    state.known = e.target.checked;
     update();
   });
   $('#sort').addEventListener('change', (e) => {
