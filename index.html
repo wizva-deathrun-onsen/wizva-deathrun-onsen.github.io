@@ -22,15 +22,15 @@
     快取版本號：每次部署前執行 `npm run bump` 更新（會同時改 CSS 與 import map）。
     import map 讓各 JS module 帶上 ?v=，瀏覽器才不會混用新舊版本的檔案。
   -->
-  <link rel="stylesheet" href="css/style.css?v=202610242225">
+  <link rel="stylesheet" href="css/style.css?v=202610242226">
   <script type="importmap">
     {
       "imports": {
-        "./js/app.js": "./js/app.js?v=202610242225",
-        "./js/config.js": "./js/config.js?v=202610242225",
-        "./js/filters.js": "./js/filters.js?v=202610242225",
-        "./js/i18n.js": "./js/i18n.js?v=202610242225",
-        "./js/theme.js": "./js/theme.js?v=202610242225"
+        "./js/app.js": "./js/app.js?v=202610242226",
+        "./js/config.js": "./js/config.js?v=202610242226",
+        "./js/filters.js": "./js/filters.js?v=202610242226",
+        "./js/i18n.js": "./js/i18n.js?v=202610242226",
+        "./js/theme.js": "./js/theme.js?v=202610242226"
       }
     }
   </script>
@@ -94,7 +94,7 @@
             </li>
             <li>哈肯離開，LV1 角色若有意志力，會直接以 1 滴血復活。</li>
             <li>刷的過程中如果發現目標角色出現淫紋，就可以回去遣散開箱：緣 LV5 恭喜，緣 LV4 再接再厲。</li>
-            <li>還沒出現淫紋的話，重複步驟 1。</li>
+            <li>還沒出現<span class="term">淫紋<button type="button" class="hint" aria-label="淫紋說明" aria-describedby="hint-mark-2">?</button><span class="tooltip" role="tooltip" id="hint-mark-2">滿好感、通過至少兩次不同大異形，且達到青銅階（等級上限顯示為 X/40）的角色。出現時，角色基本資訊左上角會有這個圖示：<img src="assets/guide/mark-icon.webp" width="260" height="98" alt="角色基本資訊左上角的淫紋圖示"></span></span>的話，重複步驟 1。</li>
           </ol>
 
           <h2>補充說明</h2>
