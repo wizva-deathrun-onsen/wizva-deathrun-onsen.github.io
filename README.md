@@ -11,72 +11,15 @@
 ## 功能
 
 - 依性格、屬性、緣份多選篩選，名稱／選項內容關鍵字搜尋，多種排序
-- 角色名稱與對話可切換中文／日文（偏好存在 localStorage）
-- 篩選狀態同步到網址，例如 `?align=good,evil&elem=fire&lang=ja`，可直接分享
+- 角色名稱與對話可切換中文／日文，會記住上次的選擇
+- 篩選條件會保留在網址上，複製網址就能分享目前的篩選結果
 - 手機版自動改為卡片排版；支援深色模式
 - 每一列都有「回報」連結，透過 GitHub Issue Form 回報資料
 
 ## 回報資料
 
 點網站上的「回報新角色／修正資料」，或直接開 [Issue 範本](https://github.com/wizva-deathrun-onsen/wizva-deathrun-onsen.github.io/issues/new?template=dialogue-report.yml)。
-維護者審核後會手動更新 `data/characters.json`，並把回報者填進 `contributor`。
-
-## 開發
-
-純 HTML + CSS + Vanilla JS（ES Modules），無 dependency、無 build step。
-
-```sh
-npm run serve   # 等同 python3 -m http.server 8000，開 http://localhost:8000
-npm test        # node:test 單元測試（Node 22+）
-```
-
-> 直接用 `file://` 開 `index.html` 會因為 fetch JSON 被瀏覽器擋下，請用本機 server。
-
-### 檔案結構
-
-| 路徑 | 說明 |
-| --- | --- |
-| `index.html` | 頁面骨架 |
-| `css/style.css` | 樣式（含深色模式、手機卡片排版） |
-| `js/app.js` | 進入點、render |
-| `js/filters.js` | 純函式：篩選／排序／搜尋／URL query |
-| `js/i18n.js` | 語言偏好、UI 字串載入 |
-| `js/config.js` | repo 網址等常數（唯一定義處） |
-| `data/characters.json` | 角色資料 |
-| `data/i18n.json` | UI 字串、性格／屬性／緣份／稀有度名稱 |
-| `assets/avatars/` | 頭像 |
-| `tests/filters.test.js` | 單元測試 |
-
-### 資料格式（`data/characters.json`）
-
-```json
-{
-  "id": "daniel",
-  "name": { "zh": "丹尼爾", "ja": "ダニエル" },
-  "avatar": "assets/avatars/daniel.webp",
-  "alignment": "good",
-  "element": "earth",
-  "rarity": "named",
-  "dialogue": { "option": 2, "answer": { "zh": "得到上帝寬恕", "ja": null } },
-  "bond": "str",
-  "contributor": "",
-  "verified": true
-}
-```
-
-| 欄位 | 值 |
-| --- | --- |
-| `alignment` | `good` / `neutral` / `evil` / `null` |
-| `element` | `light` / `dark` / `water` / `fire` / `wind` / `earth` / `none` / `null` |
-| `rarity` | `nameless` / `named` / `legendary` / `null` |
-| `dialogue.option` | `1` / `2` / `3` / `null` |
-| `bond` | `str` 力 / `int` 智 / `agi` 敏 / `fai` 信 / `luk` 命 / `spi` 靈 / `null` |
-| `verified` | `false` 時顯示「待確認」標記 |
-
-- 未知欄位一律填 `null`，頁面顯示「?」或「—」
-- `avatar` 為相對路徑；沒有頭像時填 `null`，頁面顯示名稱首字
-- `contributor` 多人用逗號或頓號分隔
-- `id` 為 kebab-case 且不可重複（測試會檢查）
+審核後會更新到網站，並在頁尾列出補充者。
 
 ## 資料來源
 
