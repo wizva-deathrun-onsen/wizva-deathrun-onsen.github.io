@@ -3,7 +3,7 @@
  */
 
 /** GitHub repo 網址（不含結尾斜線）。 */
-export const REPO_URL = 'https://github.com/wizva-deathrun-onsen/wizva-deathrun-onsen.github.io';
+export const REPO_URL = 'https://github.com/wizvd-deathrun-onsen/wizvd-deathrun-onsen.github.io';
 
 /** 社群回報用的 Issue Form 檔名，對應 .github/ISSUE_TEMPLATE/ 下的檔案。 */
 export const ISSUE_TEMPLATE = 'dialogue-report.yml';

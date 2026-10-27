@@ -100,7 +100,7 @@ Label 由 `.github/workflows/labels.yml` 建立；留言確認由 `.github/workf
 GitHub 本身就會寄信通知，不需要額外設定程式：
 
 1. 在 repo 頁面右上角按 **Watch → All Activity**
-2. 在 GitHub **Settings → Notifications** 確認 Email 通知已開啟；若通知信箱不是想要的那個，可在 **Custom routing** 把 `wizva-deathrun-onsen` 這個 organization 指定寄到該信箱
+2. 在 GitHub **Settings → Notifications** 確認 Email 通知已開啟；若通知信箱不是想要的那個，可在 **Custom routing** 把 `wizvd-deathrun-onsen` 這個 organization 指定寄到該信箱
 
 ## 資料來源
 

@@ -9,7 +9,7 @@
 列出可套用的回報（公開 repo，不需要 token）：
 
 ```sh
-curl -s "https://api.github.com/repos/wizva-deathrun-onsen/wizva-deathrun-onsen.github.io/issues?state=open&labels=%E5%B7%B2%E7%A2%BA%E8%AA%8D&per_page=100"
+curl -s "https://api.github.com/repos/wizvd-deathrun-onsen/wizvd-deathrun-onsen.github.io/issues?state=open&labels=%E5%B7%B2%E7%A2%BA%E8%AA%8D&per_page=100"
 ```
 
 每筆回報：

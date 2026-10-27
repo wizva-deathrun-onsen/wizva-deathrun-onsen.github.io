@@ -14,7 +14,7 @@
     // 規則與 js/theme.js 的 resolveTheme 相同，storage key 也需一致。
     (function () {
       var t = null;
-      try { t = localStorage.getItem('wizva-deathrun-onsen:theme'); } catch (e) {}
+      try { t = localStorage.getItem('wizvd-deathrun-onsen:theme'); } catch (e) {}
       if (t !== 'light' && t !== 'dark') {
         t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       }
@@ -25,15 +25,15 @@
     快取版本號：每次部署前執行 `npm run bump` 更新（會同時改 CSS 與 import map）。
     import map 讓各 JS module 帶上 ?v=，瀏覽器才不會混用新舊版本的檔案。
   -->
-  <link rel="stylesheet" href="css/style.css?v=202610250059">
+  <link rel="stylesheet" href="css/style.css?v=202610271854">
   <script type="importmap">
     {
       "imports": {
-        "./js/app.js": "./js/app.js?v=202610250059",
-        "./js/config.js": "./js/config.js?v=202610250059",
-        "./js/filters.js": "./js/filters.js?v=202610250059",
-        "./js/i18n.js": "./js/i18n.js?v=202610250059",
-        "./js/theme.js": "./js/theme.js?v=202610250059"
+        "./js/app.js": "./js/app.js?v=202610271854",
+        "./js/config.js": "./js/config.js?v=202610271854",
+        "./js/filters.js": "./js/filters.js?v=202610271854",
+        "./js/i18n.js": "./js/i18n.js?v=202610271854",
+        "./js/theme.js": "./js/theme.js?v=202610271854"
       }
     }
   </script>

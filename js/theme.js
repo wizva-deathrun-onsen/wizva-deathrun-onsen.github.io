@@ -5,7 +5,7 @@
  */
 
 /** localStorage 鍵名，需與 index.html 的 inline script 一致。 */
-export const THEME_STORAGE_KEY = 'wizva-deathrun-onsen:theme';
+export const THEME_STORAGE_KEY = 'wizvd-deathrun-onsen:theme';
 
 const THEMES = ['light', 'dark'];
 
